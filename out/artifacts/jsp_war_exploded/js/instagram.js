@@ -288,10 +288,6 @@ const {thumbnails} = instagram_json;
 
 thumbnails.map(index=>{
     const {image} = index;
-    const url = image.thumbnail.url;
-    id.innerHTML += `
-             <div class = "image_box">
-                  <img src=${url} 
-            </div>
-    `;
-});
+const url = image.thumbnail.url;
+id.innerHTML += `<div class = "image_box"><img src=${url}> </div>`;
+})

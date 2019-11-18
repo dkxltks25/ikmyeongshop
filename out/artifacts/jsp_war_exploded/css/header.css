@@ -76,3 +76,9 @@
     letter-spacing: 0;
     font-family: 'Noto Sans KR', Malgun Gothic, "맑은 고딕", AppleGothic, sans-serif;
 }
+.header_bottom_list_item a{
+    text-decoration: none;
+}
+header_bottom_list_item a:hover{
+    text-decoration: none;
+}

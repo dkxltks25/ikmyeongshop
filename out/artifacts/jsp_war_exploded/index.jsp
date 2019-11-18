@@ -1,5 +1,9 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%
+  String userNumber = (String)session.getAttribute("user_id");
+%>
 <html>
 <head>
   <title>$Title$</title>
@@ -64,6 +68,8 @@
   </style>
 </head>
 <body>
+
+
   <header>
     <jsp:include page="header.jsp"/>
   </header>

@@ -24,8 +24,8 @@
                 <h3>회원 로그인</h3>
                 <form name = "login">
                 <div class = "login_box_input">
-                    <input id = "login_id" type = "text" placeholder="아이디">
-                    <input id = "login_password" type = "text" placeholder="패스워드">
+                    <input id = "login_id" name = "userId" type = "text" placeholder="아이디">
+                    <input id = "login_password" name ="userPassword" type = "text" placeholder="패스워드">
                 </div>
                 <input class = "login_button" id = "login_btn" type = "button" value ="로그인">
                 <div class = "login_id_save">

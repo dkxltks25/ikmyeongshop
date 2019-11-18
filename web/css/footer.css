@@ -39,3 +39,15 @@
     background: none;
     text-align: left;
 }
+
+.member_button{
+    width: 150px;
+    height: 45px;
+    margin: 0;
+    color: #ffffff;
+    font-size: 14px;
+    border: 1px solid #ab3e55;
+    background: #ab3e55;
+    cursor: pointer;
+    font-weight: bold;
+}
