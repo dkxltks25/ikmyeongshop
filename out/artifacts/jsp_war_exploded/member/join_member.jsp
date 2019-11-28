@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <link rel = "stylesheet" href="../css/join_member.css">
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <body>
 
     <%
@@ -32,15 +33,46 @@
                     </div>
                     <div class = "join_member__box_button"></div>
                     <div class = "join_member_sns_box">
-                            <a class = "snsBox" href = "/">facebookjoin_member</a>
+                        <a id="kakao-login-btn"></a>
+                        <a href="http://developers.kakao.com/logout"></a>
                             <a class = "snsBox" href = "/">naverjoin_member</a>
-                        </div>
+                    </div>
 
                 </div>
 
             </div>
         </div>
     </div>
+    <script type='text/javascript'>
+
+        //<![CDATA[
+        // 사용할 앱의 JavaScript 키를 설정해 주세요.
+        Kakao.init('4798260abc21358405211bc570b393d3');
+        // 카카오 로그인 버튼을 생성합니다.
+        Kakao.Auth.createLoginButton({
+            container: '#kakao-login-btn',
+            success: function(authObj) {
+                // 로그인 성공시, API를 호출합니다.
+                Kakao.API.request({
+                    url: '/v1/user/me',
+                    success: function(res) {
+                        console.log(JSON.stringify(res.kaccount_email));
+                        console.log(JSON.stringify(res.id));
+                        console.log(JSON.stringify(res.properties.profile_image));
+                        console.log(JSON.stringify(res.properties.nickname));
+                    },
+                    fail: function(error) {
+                        alert(JSON.stringify(error));
+                    }
+                });
+            },
+            fail: function(err) {
+                alert(JSON.stringify(err));
+            }
+        });
+        //]]>
+
+    </script>
     <footer>
         <jsp:include page="../footer.jsp"/>
     </footer>

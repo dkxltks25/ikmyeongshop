@@ -14,6 +14,7 @@ public class UserDAO {
     private PreparedStatement pstmt;
     private ResultSet rs;
 
+    //일반 사용자 기능
     public UserDAO(){
         try{
             String dbURL = "jdbc:mysql://localhost:3306/ikmyeong?serverTimezone=UTC";
@@ -65,5 +66,35 @@ public class UserDAO {
                   return -1;
               }
     }
+    //admin 기능
+
+    //시용자 전체 조회
+    public ResultSet AllUserSelect(){
+        String Sql = "SELECT * FROM USERS order by userID asc";
+        try{
+            pstmt = conn.prepareStatement(Sql);
+            rs = pstmt.executeQuery();
+            return rs;
+
+        }catch(Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+    //신규 사용자 조회
+    public ResultSet NewAllUSerSelect(){
+        String Sql = "SELECT * FROM USERS order by userID asc";
+        try{
+            pstmt =conn.prepareStatement(Sql);
+            return pstmt.executeQuery();
+        }catch(Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+    //N명의 유저 조회
+
+
+
 
 }

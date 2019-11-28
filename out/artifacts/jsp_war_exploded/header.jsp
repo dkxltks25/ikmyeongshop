@@ -4,6 +4,7 @@
     String Session_User = (String)session.getAttribute("user_id") == null ? "" : (String)session.getAttribute("user_id");
 %>
 <html>
+
 <head>
     <title>Title</title>
 </head>
@@ -31,9 +32,9 @@
                         <%
                     }
                 %>
-                <a href = "/" class = "header_user_link">장바구니</a>
-                <a href = "/" class = "header_user_link">마이페이지</a>
-                <a href = "/" class = "header_user_link">고객센터 </a>
+                <a href = "/ShoppingBag/" class = "header_user_link">장바구니</a>
+                <a href = "/User" class = "header_user_link">마이페이지</a>
+                <a href = "/Service" class = "header_user_link">고객센터 </a>
                 <a href = "/" class = "header_user_link">검색</a>
             </div>
         </div>
@@ -53,7 +54,7 @@
         <div class = "header_bottom_list">
             <div class = "header_bottom_icon">
             </div>
-            <span class = "header_bottom_list_item"><a href = "/">Doll</a></span>
+            <span class = "header_bottom_list_item"><a href = "/Product/Product_list.jsp?ProductClass=00000001">Doll</a></span>
             <span class = "header_bottom_list_item"><a href = "/">Doll</a></span>
             <span class = "header_bottom_list_item"><a href = "/">Doll</a></span>
             <span class = "header_bottom_list_item"><a href = "/">Doll</a></span>
@@ -62,6 +63,16 @@
             <span class = "header_bottom_list_item"><a href = "/">Doll</a></span>
         </div>
     </div>
-    <script src = "js/header.js"></script>
+    <script>
+        const Link = document.getElementsByClassName("header_user_link")[3];
+        const Session = "<%=Session_User%>";
+        console.dir(Link);
+        if(Session === ""){
+
+            Link.addEventListener('click',()=>{
+                Link.href="http://localhost:8080/member/login.jsp";
+            })
+        }
+    </script>
 </body>
 </html>

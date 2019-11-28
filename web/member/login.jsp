@@ -4,6 +4,8 @@
 <head>
     <title>Title</title>
     <link rel = "stylesheet" href = "../css/login.css">
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+
 </head>
 <body>
 <header>
@@ -33,7 +35,8 @@
                 </div>
                 <br>
                 <div class = "login_sns_box">
-                    <a class = "snsBox" href = "/">facebookLogin</a>
+                    <a id="kakao-login-btn"></a>
+                    <a href="http://developers.kakao.com/logout"></a>
                     <a class = "snsBox" href = "/">naverlogin</a>
                 </div>
 
@@ -48,6 +51,35 @@
         </div>
     </div>
 </div>
+<script type='text/javascript'>
+
+    //<![CDATA[
+    // 사용할 앱의 JavaScript 키를 설정해 주세요.
+    Kakao.init('4798260abc21358405211bc570b393d3');
+    // 카카오 로그인 버튼을 생성합니다.
+    Kakao.Auth.createLoginButton({
+        container: '#kakao-login-btn',
+        success: function(authObj) {
+            // 로그인 성공시, API를 호출합니다.
+            Kakao.API.request({
+                url: '/v1/user/me',
+                success: function(res) {
+                    console.dir(res);
+                    const Allurl = "member_process.jsp?"
+
+                },
+                fail: function(error) {
+                    alert(JSON.stringify(error));
+                }
+            });
+        },
+        fail: function(err) {
+            alert(JSON.stringify(err));
+        }
+    });
+    //]]>
+
+</script>
 
 <footer>
     <%@ include file="../footer.jsp"%>

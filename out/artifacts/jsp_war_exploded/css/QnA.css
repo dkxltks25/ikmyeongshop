@@ -1,0 +1,76 @@
+.QnA__Container{
+    width:1010px;
+}
+.QnA__Cotaniner_title{
+    width:100%;
+}
+.QnA__Container__Content{
+   width:100%;
+    border-top:1px solid #999999;
+}
+
+.QnA__Container__table_wrap{
+    width:100%;
+}
+.QnA__Container__table{
+    width: 100%;
+    margin: 0 0 20px 0;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-top: 1px solid #999999;
+
+}
+.QnA__Container_table_th{
+    padding: 13px 0 7px 25px;
+    font-weight: bold;
+    border-bottom: 1px solid #dbdbdb;
+    background: #fbfbfb;
+    text-align: left;
+    vertical-align: top;
+}
+.QnA__Container_table_td{
+    height: 32px;
+    margin: 0;
+    padding: 7px 0 7px 15px;
+    border-bottom: 1px solid #dbdbdb;
+    background: #ffffff;
+}
+.QnA__Container_Select{
+    height: 31px;
+    color: #717171;
+    vertical-align: top;
+    outline: none;
+}
+
+.QnA__Container_table_tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.QnA__Container_Text{
+    padding: 0 10px;
+    outline: none;
+    font-size: 12px;
+    width:320px;
+    height:33px;
+}
+.QnA__Container_ContentBox{
+    width:570px;
+    height:275px;
+}
+.QnA__Container_button{
+    width:100%;
+}
+
+#QnA_Save{
+    display: inline-block;
+    min-width: 90px;
+    height: 42px;
+    padding: 0 10px 0 10px;
+    color: #ffffff;
+    font-size: 14px;
+    border: 1px solid #ab3e55;
+    background: #ab3e55;
+}

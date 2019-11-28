@@ -1,0 +1,234 @@
+.product_view_container{
+    width:100%;
+    margin:0px auto;
+}
+.product_view_location{
+    width:100%;
+}
+.product_view_href em{
+    display: block;
+    float: left;
+    padding: 12px 0 10px 0;
+    color: #777777;
+    font-size: 11px;
+}
+.local_home{
+    color:#777777;
+    text-decoration: none;
+
+}
+.product_view_wrap{
+    width:1200px;
+    margin:40px auto;
+    display:flex;
+    justify-content: space-around;
+}
+.product_view_container_top{
+    width:100%;
+    background-color:#f6f6f6;
+
+}
+.product_view_img{
+    width:490px;
+    height:490px;
+}
+
+.product_view_option{
+    width:490px;
+}
+.product_view_option h3{
+    padding: 35px 0 20px;
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    width: 100%;
+    color: #000000;
+    font-size: 20px;
+}
+
+.product_view_options{
+    width:100%;
+}
+.product_view_option_line{
+    float: left;
+    width: 100%;
+    min-height: 24px;
+    padding: 7px 0 6px 0
+}
+.first_info{
+    width:33%;
+    float:left;
+    color: #888888;
+    font-weight: normal;
+    word-wrap: break-word;
+}
+.second_info{
+    float:left;
+}
+.second_info strong{
+    color: #000000;
+    font-weight: bold;
+}
+.product_view_price_line{
+    width:100%;
+    margin:0px auto;
+    display:flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #999999;
+    padding: 20px 0 20px 10px;
+}
+
+.full_price_wrap{
+    padding:20px 0 20px 10px;
+    width:33%;
+    float:right;
+    border-bottom: 1px solid #dbdbdb;
+
+}
+
+.full_price_left{
+    float:right;
+}
+.sum_price_wrap{
+    clear:both;
+    margin: 15px 0 0 0;
+    padding-top: 10px;
+    color: black
+}
+.sum_price{
+    float:right;
+}
+.Product_purchase_wrap{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    padding:20px 0px 20px 10px;
+}
+.Product_purchase_bucket button{
+    display: inline-block;
+    width: 152px;
+    height: 52px;
+    margin: 0 0 0 6px;
+    padding: 0 10px 0 10px;
+    color: #3e3d3c;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.Product_purchase_on button{
+    display: inline-block;
+    width: 230px;
+    height: 52px;
+    margin: 0 0 0 6px;
+    padding: 0 10px 0 10px;
+    color: #ffffff;
+    font-size: 16px;
+    border: 1px solid #ab3e55;
+    background: #ab3e55;
+    text-align: center;
+    font-weight: bold;
+}
+.Product_purchase_attention button {
+    display: inline-block;
+    width: 152px;
+    height: 52px;
+    margin: 0 0 0 6px;
+    padding: 0 10px 0 10px;
+    color: #3e3d3c;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.product_view_container_bottom{
+    width:1200px;
+    margin:0px auto;
+}
+.product_view_bottom_view{
+    width:100%;
+    padding:20px 0px 20px 10px;
+}
+.imagePosition{
+    width:900px;
+    margin:0px auto;
+}
+.product_view_list{
+    width: 100%;
+    height: 44px;
+    border-bottom: 1px solid #c7c7c7;
+    display:flex;
+    justify-content: space-around;
+}
+.product_view_list_item{
+    width:15%;
+    text-align: center;
+}
+
+.product_view_list_item a{
+    text-decoration: none;
+
+}
+
+.delivery_cont{
+    position: relative;
+    min-height: 200px;
+}
+
+.product_view_price_count{
+    float: left;
+    padding: 0 5px;
+    width: 43px;
+    outline: none;
+    height: 33px;
+    border: 1px solid #ccc;
+    color: #3f3f3f;
+    font-size: 12px;
+    line-height: 31px;
+    text-align: center;
+}
+.product_view_price_btn{
+    display: block;
+    width: 23px;
+    height: 17px;
+    vertical-align: center;
+}
+
+.ProductInfo_review{
+    width:100%;
+    margin:0px auto;
+}
+
+.ProductInfo_review_button{
+    padding:20px 0px 20px 10px;
+    float:right;
+}
+
+.viewAllReview{
+    display: inline-block;
+    min-width: 120px;
+    padding: 10px 10px 10px 10px;
+    color: #3e3d3c;
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    text-align: center;
+    border: 1px solid #404040;
+    color: #404040;
+}
+
+.WriteReview{
+    display: inline-block;
+    min-width: 120px;
+    padding: 10px 10px 10px 10px;
+    color: #ffffff;
+    font-weight: bold;
+    border: 1px solid #ab3e55;
+    background: #ab3e55;
+    text-align: center;
+    background: #404040;
+    border: 1px solid #404040;
+}
