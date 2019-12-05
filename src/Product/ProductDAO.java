@@ -1,7 +1,4 @@
 package Product;
-
-import USER.User;
-
 import java.sql.*;
 
 public class ProductDAO {
@@ -26,17 +23,101 @@ public class ProductDAO {
             e.printStackTrace();
         }
     }
-    public ResultSet list()  throws SQLException {
-        String SQL = "SELECT * FROM PRODUCT";
-        try {
-            pstmt = conn.prepareStatement(SQL);
-            rs = pstmt.executeQuery();
-            return rs;
-        }catch(Exception e){
-            e.printStackTrace();
+    //상품 옵션 쿼리
+
+    //상품 리스트
+    public ResultSet list(String ProductClass,String ProductOption)  throws SQLException {
+        String Sql = "";
+        if(ProductOption.equals("1")) {
+            Sql = "SELECT * FROM PRODUCT WHERE PRODUCTCLASS = ?";
+            try {
+                pstmt = conn.prepareStatement(Sql);
+                pstmt.setString(1,ProductClass);
+                rs = pstmt.executeQuery();
+                return rs;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return null;
+            }
+        }
+        //상품 인기순
+        if(ProductOption.equals("2")) {
+             Sql = "SELECT p.PRODUCTID,P.PRODUCTNAME,p.PRODUCTPRICE,p.PRODUCTCLASS,P.PRODUCTDISCOUNT,avg(r.productgrade) as GRADE FROM PRODUCT AS p \n" +
+                    "\tleft join REVIEW AS r\n" +
+                    "\t\ton p.productId = r.PRODUCTID\n" +
+                    "         where PRODUCTCLASS = ?\n" +
+                    "         group by p.PRODUCTID\n" +
+                    "\t\t\torder by GRADE desc;";
+            try {
+                pstmt = conn.prepareStatement(Sql);
+                pstmt.setString(1,ProductClass);
+                rs = pstmt.executeQuery();
+                return rs;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return null;
+            }
+        }
+        //상품 낮은 가격순
+        if(ProductOption.equals("3")) {
+            Sql = "SELECT * FROM PRODUCT where PRODUCTCLASS = ? order by ProductPrice asc;";
+            try {
+                pstmt = conn.prepareStatement(Sql);
+                pstmt.setString(1,ProductClass);
+
+                rs = pstmt.executeQuery();
+                return rs;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return null;
+            }
+        }
+        if(ProductOption.equals("4")) {
+            Sql = "SELECT * FROM PRODUCT where PRODUCTCLASS = ? order by ProductPrice desc";
+            try {
+                pstmt = conn.prepareStatement(Sql);
+                pstmt.setString(1,ProductClass);
+
+                rs = pstmt.executeQuery();
+                return rs;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return null;
+            }
+        }
+        if(ProductOption.equals("5")) {
+            Sql ="SELECT p.PRODUCTID,P.PRODUCTNAME,p.PRODUCTPRICE,p.PRODUCTCLASS,P.PRODUCTDISCOUNT,avg(r.productgrade) as GRADE FROM PRODUCT AS p \n" +
+                    "\tleft join REVIEW AS r\n" +
+                    "\t\ton p.productId = r.PRODUCTID\n" +
+                    "         where PRODUCTCLASS = ?\n" +
+                    "         group by p.PRODUCTID\n" +
+                    "\t\t\torder by GRADE desc;\n";
+            try {
+                pstmt = conn.prepareStatement(Sql);
+                pstmt.setString(1,ProductClass);
+                rs = pstmt.executeQuery();
+                return rs;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return null;
+            }
+        }
+        if(ProductOption.equals("6")) {
+            Sql = "SELECT * FROM PRODUCT where PRODUCTCLASS = ? order by createAt ASC;";
+            try {
+                pstmt = conn.prepareStatement(Sql);
+                pstmt.setString(1,ProductClass);
+                rs = pstmt.executeQuery();
+                return rs;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return null;
+            }
+        }else{
             return null;
         }
     }
+    //상품 선택
     public ResultSet SelectProduct(String id){
         String Sql = "SELECT * FROM PRODUCT WHERE PRODUCTID=?";
         try{
@@ -103,7 +184,6 @@ public class ProductDAO {
                 }
             }
         }
-
         public ResultSet Shopinglist(String UserId){
             String Sql = "" +
                     "SELECT S.ShoppingBagId,S.ShoppingBagCount,P.ProductName, p.productPrice FROM ShoppingBag AS S " +
@@ -123,9 +203,10 @@ public class ProductDAO {
             }
         }
 
-        //admin 영역
+
+
         public int InsertProduct(String ProductName, String ProductClass , String ProductCount, String ProductDiscount ,String ProductPrice){
-            String Sql ="Insert into Produt(ProductName,ProductClass,ProductCount,ProductDiscount,ProductPrice,createAt,updateAt) value(?,?,?,?,?,now(),now())";
+            String Sql ="Insert into Product(ProductName,ProductClass,ProductCount,ProductDiscount,ProductPrice,createAt,updateAt) value(?,?,?,?,?,now(),now())";
             try{
                 pstmt = conn.prepareStatement(Sql);
                 pstmt.setString(1,ProductName);
@@ -140,7 +221,17 @@ public class ProductDAO {
                 return -1;
             }
         }
-
+        //관리자 전체 상품 조회
+        public ResultSet AdminList(){
+            String Sql = "SELECT * FROM PRODUCT";
+            try{
+                pstmt = conn.prepareStatement(Sql);
+                return pstmt.executeQuery();
+            }catch(Exception e){
+                e.printStackTrace();
+                return null;
+            }
+        }
         //할인율 업데이트
         public int UpdateDiscountProduct(String ProductNumber,String ProductDisCount){
             String Sql = "update Product set ProductDiscount=? where ProductID = ?";
@@ -172,6 +263,39 @@ public class ProductDAO {
                 return -1;
             }
         }
+        //상품 파일 이름 설정
+        public int ReturnProductName(){
+                    String Sql ="SELECT ProductId from Product order by ProductId desc limit 1";
+                    try{
+                        pstmt = conn.prepareStatement(Sql);
+                        rs = pstmt.executeQuery();
+                        if(rs.next()){
+                            return Integer.parseInt(rs.getString(1));
+                        }else{
+                            return 0;
+                        }
+                    }catch(Exception e){
+                        e.printStackTrace();
+                        return -1;
+            }
+        }
 
+        public void ProductViewCount (String ProductId){
+            String Sql = "update PRODUCT set ProductViewCount = ProductViewCount + 1 where ProductId = ?";
+            try{
+                pstmt = conn.prepareStatement(Sql);
+                pstmt.setString(1,ProductId);
+                pstmt.executeUpdate();
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+
+
+
+        //관리자
+        public ResultSet BestShoppingBag(String Day){
+
+        }
 
 }

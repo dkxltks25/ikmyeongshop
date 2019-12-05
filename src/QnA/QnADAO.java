@@ -41,6 +41,17 @@ public class QnADAO{
             return -1;
         }
     }
+    public int ReturnQnANumber(){
+        String Sql = "SELECT QNAID FROM QnA order by QnAId desc limit 1";
+        try{
+            pstmt = conn.prepareStatement(Sql);
+            rs = pstmt.executeQuery();
+            return Integer.parseInt(rs.getString(1));
+        }catch (Exception e){
+            e.printStackTrace();
+            return -1;
+        }
+    }
     public ResultSet UserQnA(String UserId){
         String Sql = "SELECT * from QnA  WHERE UserId =?";
         try{
@@ -55,6 +66,18 @@ public class QnADAO{
     }
 
     //관리자 기능
+    //해당 번호의 글 읽어오기
+    public ResultSet SelectNumberQnA(String Id){
+        String Sql = "SELECT * FROM QnA Where QnAId =?";
+        try{
+            pstmt = conn.prepareStatement(Sql);
+            pstmt.setString(1,Id);
+            return pstmt.executeQuery();
+        }catch(Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
 
     //토글 QNA보기
     public ResultSet AdminSeeAllQnA(String Number){

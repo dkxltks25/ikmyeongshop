@@ -1,4 +1,5 @@
-<%--
+<%@ page import="Notice.NoticeDAO" %>
+<%@ page import="java.sql.ResultSet" %><%--
   Created by IntelliJ IDEA.
   User: USER
   Date: 2019-11-28
@@ -26,8 +27,17 @@
             position: fixed; right: 5%; bottom: 5%
 
         }
+        .table{
+            width:100%;
+        }
     </style>
 </head>
+<%
+
+    NoticeDAO notice = new NoticeDAO();
+    ResultSet rs =notice.listNotice();
+
+%>
 <body>
 <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
 
@@ -35,6 +45,36 @@
     <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
             <div class="demo-cards mdl-color--white mdl-shadow--3dp mdl-cell mdl-cell--12-col mdl-grid">
+                <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp table">
+                    <thead>
+                    <tr>
+                        <th class="mdl-data-table__cell--non-numeric">공지사항번호</th>
+                        <th>공지 제목</th>
+                        <th>작성자</th>
+                        <th>현재 작성일</th>
+                        <th>최초 작성일</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <%
+                            while(rs.next())
+                            {
+                        %>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric"><%=rs.getString("noticeId")%></td>
+                                <td><%=rs.getString("noticetitle")%></td>
+                                <td><%=rs.getString("noticewrite")%></td>
+                                <td><%=rs.getString("createAt")%></td>
+                                <td><%=rs.getString("updateAt")%></td>
+                            </tr>
+                        <%
+                            }
+                        %>
+
+
+
+                    </tbody>
+                </table>
 
 
             </div>

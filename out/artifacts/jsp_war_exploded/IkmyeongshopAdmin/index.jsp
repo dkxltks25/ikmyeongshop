@@ -22,9 +22,15 @@
     <link href="//cdn.muicss.com/mui-0.10.0/css/mui.min.css" rel="stylesheet" type="text/css" />
     <script src="//cdn.muicss.com/mui-0.10.0/js/mui.min.js"></script>
     <style>
-        .mui-dropdown{
-            position: fixed; right: 5%; bottom: 5%
-
+        .mdl-grid{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .mui-col-xs-6{
+            width:500px;
+            height:500px;
+            margin:10px;
         }
     </style>
 </head>
@@ -34,6 +40,12 @@
     <jsp:include page="Drawer.jsp"/>
     <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
+            <div class="mui-row">
+                <div class="mui-col-xs-6 mui-col-md-6 mdl-color--white mdl-shadow--3dp">신규 사용자 유입률</div>
+                <div class="mui-col-xs-6 mui-col-md-6 mdl-color--white mdl-shadow--3dp">이번달 가장 잘 팔리는 상품</div>
+                <div class="mui-col-xs-6 mui-col-md-6 mdl-color--white mdl-shadow--3dp">이번달 가장 관심이 많은 상품</div>
+                <div class="mui-col-xs-6 mui-col-md-6 mdl-color--white mdl-shadow--3dp">이번달 가장 장바구니에 많이 담은 상품</div>
+            </div>
 
         </div>
 

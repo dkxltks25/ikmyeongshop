@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.*;
-
+import java.io.*;
 
 
 public class UserDAO {
@@ -46,8 +46,52 @@ public class UserDAO {
             }
         return -2;
     }
+    //중복 체크
+    public int DuplicateId(String id){
+        String Sql = "select * from Users where userid = ?";
+        try{
+            pstmt = conn.prepareStatement(Sql);
+            pstmt.setString(1,id);
+            rs = pstmt.executeQuery();
+            if(rs.next()){
+                System.out.println("테스트");
+                return 1;
+            }else{
+                return 0;
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+            return -1;
 
+        }
+    }
+    //카카오 이용자 입력
+    public int KakaoJoin(String id, String username, String email) throws SQLException{
+        if(DuplicateId(id)==1){
+            return 0;
+        }
+        String SQL = "INSERT INTO USERS(userid, useremail,username, createAt,updateAt)";
+        SQL += " VALUES(?,?,?,now(),now())";
+        try{
+            pstmt = conn.prepareStatement(SQL);
+            pstmt.setString(1,id);
+            pstmt.setString(2,username);
+            pstmt.setString(3,email);
+            int result =  pstmt.executeUpdate();
+            System.out.println(result);
+            return result;
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            return -1;
+        }
+    }
+
+    //일반이용자 입력
     public int join(String id, String password , String username, String phone, String email , String ZipCode , String address) throws SQLException{
+            if(DuplicateId(id)==1){
+                return 0;
+            }
             String SQL = "INSERT INTO USERS(userid,userpassword, useremail, userphone,username, userzipcode, userAdress, createAt,updateAt)";
               SQL += " VALUES(?,?,?,?,?,?,?,now(),now())";
               try{
@@ -86,6 +130,19 @@ public class UserDAO {
         String Sql = "SELECT * FROM USERS order by userID asc";
         try{
             pstmt =conn.prepareStatement(Sql);
+            return pstmt.executeQuery();
+        }catch(Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    //일반 유저 정보 검색
+    public ResultSet SelectUser(String Userid){
+        String Sql = "SELECT * FROM USERS WHERE USERid = ?";
+        try{
+            pstmt = conn.prepareStatement(Sql);
+            pstmt.setString(1,Userid);
             return pstmt.executeQuery();
         }catch(Exception e){
             e.printStackTrace();

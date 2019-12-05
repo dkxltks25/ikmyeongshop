@@ -55,12 +55,16 @@
                 // 로그인 성공시, API를 호출합니다.
                 Kakao.API.request({
                     url: '/v1/user/me',
-                    success: function(res) {
-                        console.log(JSON.stringify(res.kaccount_email));
-                        console.log(JSON.stringify(res.id));
-                        console.log(JSON.stringify(res.properties.profile_image));
-                        console.log(JSON.stringify(res.properties.nickname));
-                    },
+                    success:  function(res){
+                        const kemail = JSON.stringify( res.kaccount_email);
+                        const kid = JSON.stringify(res.id);
+                        const kimagw = JSON.stringify(res.properties.profile_image);
+                        const kname = JSON.stringify(res.properties.nickname);
+                        console.dir(res);
+                        const url =  "./KakoMember.jsp?kemail=k" +kemail + "&kid="+kid+ "&kname="+kname;
+                        location.href=url;
+                        console.log(url);
+                        },
                     fail: function(error) {
                         alert(JSON.stringify(error));
                     }

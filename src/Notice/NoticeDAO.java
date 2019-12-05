@@ -45,7 +45,8 @@ public class NoticeDAO {
         String Sql = "select * from notice";
         try{
             pstmt = conn.prepareStatement(Sql);
-            return pstmt.executeQuery();
+            ResultSet rs = pstmt.executeQuery();
+            return rs;
         }catch(Exception e){
             e.printStackTrace();
             return null;

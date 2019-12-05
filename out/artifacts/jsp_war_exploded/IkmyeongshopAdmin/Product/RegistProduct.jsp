@@ -27,7 +27,6 @@
     <style>
         .mui-dropdown{
             position: fixed; right: 5%; bottom: 5%
-
         }
     </style>
 </head>
@@ -38,7 +37,7 @@
     <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
             <div class="demo-cards mdl-color--white mdl-shadow--3dp mdl-cell mdl-cell--12-col mdl-grid">
-                <form method="post" id = "RegisterProductForm" class="mui-form" style ="width:100%;padding:20px 10px 20px 10px" enctype="multipart/form-data">
+                <form method="POST" id = "RegisterProductForm" class="mui-form" style ="width:100%;padding:20px 10px 20px 10px" enctype="multipart/form-data">
                     <legend>Title</legend>
                     <div class="mui-textfield mui-textfield--float-label">
                         <input type="text" name="ProductName" required minlength="4">
@@ -69,9 +68,9 @@
                         <label>상품할인(0~100 까지만 입력해주세요)</label>
                     </div>
                         <input type="file" id = "ProductTubmnail" name="ProductTubmnail"/>
-                        <input type="file" id = "ProductBackground"name="ProductBackground"/>
+                        <input type="file" id = "ProductBackground" name="ProductBackground"/>
 
-                    <button style = "float:right;" id = "btn" class="mui-btn mui-btn--raised">Submit</button>
+                    <button style = "float:right;" id = "btn" type="submit" class="mui-btn mui-btn--raised">Submit</button>
                 </form>
 
             </div>
@@ -94,30 +93,8 @@
         const ProductBackground = document.getElementById("ProductBackground");
         const btn = document.getElementById("btn");
         RegisterForm.action="../action/RegisterProductAction.jsp"
-        btn.addEventListener("click",()=>{
+        RegisterForm.addEventListener("submit",()=>{
             alert(1);
-            console.dir(ProductTubmnail.files[0]);
-            console.dir(ProductBackground.files[0]);
-            const formData = new FormData();
-            formData.append("img", ProductTubmnail.files[0]);
-            console.dir(formData);
-            $.ajax({
-                url: '/image',
-                processData: false,
-                contentType: false,
-                data: formData,
-                type: 'POST',
-                success: function(response, status, jqxhr) {
-                    console.dir(response);
-                    console.dir(status);
-                    console.dir(jqxhr);
-
-                },
-                error:(e)=>{
-                    console.log(e);
-                }
-            });
-
         });
 
     };

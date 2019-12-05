@@ -7,185 +7,124 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d729328-1888-4f8f-b9cb-b8e8b3849236" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/Product/ProductAdd.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/Product/ProductInfo.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/Product/ProductView.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/Product/Product_list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/ShoppingBag/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/User/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/WEB-INF/classes/Attention/Attention.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/WEB-INF/classes/Attention/AttentionDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/WEB-INF/classes/Product/Product.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/WEB-INF/classes/Product/ProductDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/WEB-INF/classes/USER/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/WEB-INF/classes/USER/UserDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/css/ProductView.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/css/User.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/css/product_list.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/image/Background/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/image/Thumbnail/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/ProductView.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/member.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/angular/mui-angular.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/angular/mui-angular.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/css/mui-rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/css/mui-rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/css/mui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/css/mui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/email/mui-email-inline-rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/email/mui-email-inline.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/email/mui-email-styletag-rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/email/mui-email-styletag.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-angular-combined.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-angular-combined.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-colors.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-colors.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-combined.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-combined.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-noglobals-rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-noglobals-rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-noglobals.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-noglobals.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-px-rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-px-rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-px.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-px.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-react-combined.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-react-combined.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-rem-rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-rem-rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-rem.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/extra/mui-rem.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/js/mui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/js/mui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/react/mui-react.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/react/mui-react.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/webcomponents/mui-webcomponents.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/mui-0.10.0/webcomponents/mui-webcomponents.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/product_list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/member/loginProcess.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/member/logout.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/member/member_process.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/jsp/Attention/Attention.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/jsp/Attention/AttentionDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/jsp/Product/Product.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/jsp/Product/ProductDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/jsp/USER/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/jsp/USER/UserDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Attention/Attention.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Attention/AttentionDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Notice/NoticeDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Product/ProductDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProductQ/ProductQDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/QnA/QnA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/QnA/QnADAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Review/Review.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Review/ReviewDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/Drawer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/Notice/RegistNotice.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/Notice/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/Product/RegistProduct.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/Product/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/Purchase/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/QnA/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/User/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/action/RegisterProductAction.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/js/RegisterProductForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/Product/ProductAdd.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/Product/ProductInfo.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/Product/ProductView.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/Product/Product_list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/QnA/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/Service/ServiceQnA.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/Service/ServiceQnAUploadAction.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/Service/ServiceView.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/Service/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/ShoppingBag/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/User/UserSelect.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/User/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/ProductView.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/QnA.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/Service.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/ServiceQnA.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/User.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/product_list.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/image/Background/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/image/Thumbnail/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/ProductInfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/ProductView.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/QnA.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/Service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/ServiceQnA.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/UserSelect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/angular/mui-angular.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/angular/mui-angular.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/css/mui-rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/css/mui-rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/css/mui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/css/mui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/email/mui-email-inline-rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/email/mui-email-inline.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/email/mui-email-styletag-rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/email/mui-email-styletag.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-angular-combined.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-angular-combined.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-colors.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-colors.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-combined.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-combined.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-noglobals-rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-noglobals-rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-noglobals.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-noglobals.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-px-rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-px-rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-px.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-px.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-react-combined.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-react-combined.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-rem-rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-rem-rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-rem.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/extra/mui-rem.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/js/mui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/js/mui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/react/mui-react.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/react/mui-react.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/webcomponents/mui-webcomponents.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/mui-0.10.0/webcomponents/mui-webcomponents.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/product_list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/member/member_process.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Purchase/PurchaseDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/Product/ProductViewDetail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/action/ProductViewDetailAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/action/QnAListArray.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/js/Product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/js/ProductDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/js/QnA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/js/User.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/Product/AttentionAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/Purchase/PurchaseAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/Purchase/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/Review/ReviewAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/Review/ReviewList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/Review/ViewReview.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/Review/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/Purchase.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/Review.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/ReviewList.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/ViewReview.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/Purchase.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/Review.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/shoppingBag.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/member/KaKaoLogin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/member/KakoMember.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jsp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/css/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/css/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/IkmyeongshopAdmin/Drawer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/IkmyeongshopAdmin/Drawer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/IkmyeongshopAdmin/Notice/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/IkmyeongshopAdmin/Notice/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/IkmyeongshopAdmin/Product/RegistProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/IkmyeongshopAdmin/Product/RegistProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/IkmyeongshopAdmin/Product/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/IkmyeongshopAdmin/Product/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/IkmyeongshopAdmin/QnA/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/IkmyeongshopAdmin/QnA/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/IkmyeongshopAdmin/User/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/IkmyeongshopAdmin/User/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/IkmyeongshopAdmin/action/RegisterProductAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/IkmyeongshopAdmin/action/RegisterProductAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/IkmyeongshopAdmin/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/IkmyeongshopAdmin/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/Product/ProductInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/Product/ProductInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/Product/ProductView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/Product/ProductView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/Product/Product_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/Product/Product_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/Service/ServiceNotice.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/Service/ServiceNotice.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/Service/ServiceQnA.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/Service/ServiceQnA.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/Service/ServiceQnAUploadAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/Service/ServiceQnAUploadAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/ShoppingBag/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/ShoppingBag/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/User/UserSelect.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/User/UserSelect.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/WEB-INF/classes/Attention/AttentionDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/WEB-INF/classes/Attention/AttentionDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/WEB-INF/classes/Notice/NoticeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/WEB-INF/classes/Notice/NoticeDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/WEB-INF/classes/Product/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/WEB-INF/classes/Product/ProductDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/WEB-INF/classes/QnA/QnADAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/WEB-INF/classes/QnA/QnADAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/WEB-INF/classes/Review/ReviewDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/WEB-INF/classes/Review/ReviewDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/WEB-INF/classes/USER/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/WEB-INF/classes/USER/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/css/User.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/css/User.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/css/join.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/css/join.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/image/Thumbnail/01.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/image/Thumbnail/011.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/image/Thumbnail/0110.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/image/Thumbnail/0111.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/image/Thumbnail/0112.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/image/Thumbnail/012.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/image/Thumbnail/013.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/image/Thumbnail/014.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/image/Thumbnail/015.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/image/Thumbnail/016.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/image/Thumbnail/017.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/image/Thumbnail/018.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/image/Thumbnail/019.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/ProductView.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/ProductView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/product_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/js/product_list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/member/join.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/member/join.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/member/join_member.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/member/join_member.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/member/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/member/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/member/loginProcess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/member/loginProcess.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jsp/Attention/AttentionDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jsp/Attention/AttentionDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jsp/Notice/NoticeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jsp/Notice/NoticeDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jsp/Product/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jsp/Product/ProductDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jsp/QnA/QnADAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jsp/QnA/QnADAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jsp/Review/ReviewDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jsp/Review/ReviewDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jsp/USER/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jsp/USER/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Attention/AttentionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Attention/AttentionDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Notice/NoticeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Notice/NoticeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Product/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QnA/QnADAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QnA/QnADAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Review/ReviewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Review/ReviewDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/USER/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/USER/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/IkmyeongshopAdmin/Drawer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/Drawer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/IkmyeongshopAdmin/Notice/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/Notice/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/IkmyeongshopAdmin/Product/RegistProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/Product/RegistProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/IkmyeongshopAdmin/Product/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/Product/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/IkmyeongshopAdmin/QnA/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/QnA/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/IkmyeongshopAdmin/User/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/User/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/IkmyeongshopAdmin/action/RegisterProductAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/action/RegisterProductAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/IkmyeongshopAdmin/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/IkmyeongshopAdmin/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Product/ProductInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Product/ProductInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Product/ProductView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Product/ProductView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Product/Product_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Product/Product_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Service/ServiceNotice.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Service/ServiceNotice.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Service/ServiceQnA.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Service/ServiceQnA.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Service/ServiceQnAUploadAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Service/ServiceQnAUploadAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/ShoppingBag/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/ShoppingBag/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/User/UserSelect.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/User/UserSelect.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/User.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/User.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/join.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/join.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/ProductView.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/ProductView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/product_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/product_list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/member/join.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/member/join.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/member/join_member.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/member/join_member.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/member/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/member/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/member/loginProcess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/member/loginProcess.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/product/Product_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Product/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/product/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jsp_war_exploded/Product/index.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="15" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -231,9 +170,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="jsf" />
-        <option value="CSS File" />
         <option value="Class" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
         <option value="Jsp File" />
       </list>
     </option>
@@ -252,12 +191,15 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1TddDHwCAEfngzwWLkPkXsJ7qgg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/jakarta-taglibs-standard-1.1.1/lib/jstl.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/IkmyeongshopAdmin/User" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -269,10 +211,11 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\IdeaProjects\jsp\web\IkmyeongshopAdmin\User" />
       <recent name="C:\Users\USER\IdeaProjects\jsp\web\IkmyeongshopAdmin\css" />
       <recent name="C:\Users\USER\IdeaProjects\jsp\web\IkmyeongshopAdmin" />
       <recent name="C:\Users\USER\IdeaProjects\jsp\web\member" />
@@ -482,6 +425,16 @@
       <workItem from="1574865381151" duration="20690000" />
       <workItem from="1574890278281" duration="143000" />
       <workItem from="1574906952232" duration="15076000" />
+      <workItem from="1574994014794" duration="33882000" />
+      <workItem from="1575037975357" duration="19723000" />
+      <workItem from="1575091830587" duration="212000" />
+      <workItem from="1575222079541" duration="85000" />
+      <workItem from="1575259413776" duration="18018000" />
+      <workItem from="1575356953852" duration="3914000" />
+      <workItem from="1575432749263" duration="29871000" />
+      <workItem from="1575480568388" duration="2086000" />
+      <workItem from="1575484075233" duration="4879000" />
+      <workItem from="1575509463965" duration="34421000" />
     </task>
     <task id="LOCAL-00001" summary="today complete">
       <created>1574099015146</created>
@@ -517,51 +470,39 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/member/join.jsp</url>
-          <line>103</line>
+          <url>file://$PROJECT_DIR$/out/artifacts/jsp_war_exploded/Review/ReviewList.jsp</url>
+          <line>12</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/Product/ProductView.jsp</url>
-          <line>52</line>
+          <url>file://$PROJECT_DIR$/web/Review/index.jsp</url>
+          <line>11</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/Product/ProductView.jsp</url>
-          <line>41</line>
+          <url>file://$PROJECT_DIR$/web/Review/ReviewList.jsp</url>
+          <line>64</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/User/index.jsp</url>
-          <line>16</line>
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/web/Review/ReviewList.jsp</url>
+          <line>25</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/User/index.jsp</url>
-          <line>20</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ProductQ/ProductQDAO.java</url>
-          <line>18</line>
+          <url>file://$PROJECT_DIR$/web/IkmyeongshopAdmin/Product/ProductViewDetail.jsp</url>
+          <line>64</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/IkmyeongshopAdmin/Drawer.jsp</url>
-          <line>30</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/IkmyeongshopAdmin/Drawer.jsp</url>
-          <line>28</line>
+          <url>file://$PROJECT_DIR$/web/IkmyeongshopAdmin/action/ProductViewDetailAction.jsp</url>
+          <line>51</line>
           <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/web/js/Service.js</url>
-          <line>24</line>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/jsp$Tomcat_8_5_45.ic" NAME="Tomcat 8.5.45 Coverage Results" MODIFIED="1575438594818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

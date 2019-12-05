@@ -35,14 +35,14 @@
             <h2>1:1문의</h2>
         </div>
         <div class = "ServiceQnA__Container__Content">
+            <form type="post" action = "ServiceQnAUploadAction.jsp" name ="ServiceQnA__form" enctype="multipart/form-data">
             <div class = "ServiceQnA__Container__table_wrap">
                 <table class = "ServiceQnA__Container__table">
-                    <form name ="ServiceQnA__form">
                         <colgroup>
                             <col style="width:15%">
                             <col style="width:85%">
                         </colgroup>
-                        <tr class = "ServiceQnA__Container_table_tr">
+                    <tr class = "ServiceQnA__Container_table_tr">
                             <th class = "ServiceQnA__Container_table_th">말머리</th>
                             <td class = "ServiceQnA__Container_table_td">
                                 <Select id ="ServiceQnA__Container_Select" name = "QnA_SELECT">
@@ -53,7 +53,7 @@
                         <tr class = "ServiceQnA__Container_table_tr">
                             <th class = "ServiceQnA__Container_table_th">작성자</th>
                             <td class = "ServiceQnA__Container_table_td">
-                                TEST
+                                사용자테스트
                             </td>
                         </tr>
                         <tr class = "ServiceQnA__Container_table_tr">
@@ -65,23 +65,25 @@
                         <tr class = "ServiceQnA__Container_table_tr">
                             <th class = "ServiceQnA__Container_table_th">본문</th>
                             <td class = "ServiceQnA__Container_table_td">
-                                <input type = "text" name="QnATitle" class = "ServiceQnA__Container_ContentBox">
+                                <input type = "text" name="QnAContent" class = "ServiceQnA__Container_ContentBox">
                                 (<span id="textCount">0</span>/255)
                             </td>
                         </tr>
                         <tr class = "ServiceQnA__Container_table_tr">
                             <th class = "ServiceQnA__Container_table_th">첨부파일</th>
                             <td class = "ServiceQnA__Container_table_td">
-                                <input type="text" name="fileArea" id="QnA_Container_file">
+                                <input type="file" name="fileArea" id="QnA_Container_file">
                                 <input type = "button" value="찾아보기">
                             </td>
                         </tr>
-                    </form>
-                </table>>
+
+                </table>
             </div>
             <div class ="ServiceQnA__Container_button">
-                <input type="button" id = "QnA_Save" value = "저장">
+                <input type="submit" id = "QnA_Save" value = "저장">
             </div>
+            </form>
+
         </div>
 
     </div>

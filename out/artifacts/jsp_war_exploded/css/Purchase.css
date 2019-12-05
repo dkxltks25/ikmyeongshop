@@ -1,0 +1,136 @@
+
+.Purchase__container{
+    width:1200px;
+    margin:0 auto;
+}
+
+
+.Purchase__container_header{
+    width:100%;
+    overflow: hidden;
+    border-bottom: 1px solid #dbdbdb;
+}
+.Purchase__container_Info_wrap{
+    margin: 50px 0 10px 0;
+}
+.Purchase__container_Info{
+    padding: 0 0 10px 0;
+    font-size: 16px;
+}
+.Purchase__container_table{
+    width: 100%;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+    text-align: center;
+}
+.Purchase__container_table table{
+    width: 100%;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+    text-align: center;
+}
+.Purchase__container_table th{
+    padding: 9px 10px 10px 10px;
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #dbdbdb;
+    background: #f7f7f7;
+}
+.Purchase__container_table td{
+    height: 31px;
+    padding: 15px 10px 14px 10px;
+    color: #777777;
+    border-bottom: 1px solid #dbdbdb;
+    background: #ffffff;
+}
+.ProductImgWrap{
+    width:50px;
+}
+.ProductImgWrap span{
+    display: table-cell;
+    width: 38px;
+    padding: 0 10px 0 0;
+    vertical-align: top;
+}
+.ProductImgWrap img{
+    width:42px;
+    height:42px;
+}
+.ProductNameWrap{
+    display: table-cell;
+    padding: 0;
+    text-align: left;
+    vertical-align: middle;
+}
+.ProductFirstLine{
+    display:flex;
+}
+.Purchase__container_ProductPrice_wrap{
+    margin: 30px 0 0 0;
+    padding: 20px 40px 25px 40px;
+    border: 2px solid #d6d6d6;
+}
+.Purchase__container_ProductPrice{
+    text-align:right;
+    display: table;
+    float: right;
+
+}
+
+.Purchase__container_User_info,.Purchase__container_delivery_info{
+    margin: 0 0 0 0;
+    padding: 0 0 10px 0;
+    font-size: 16px;
+}
+.Purchase__container_User_table,.Purchase__container_delivery_info{
+    margin: 50px 0 0 0;
+}
+
+.Purchase__container_User_table table,.Purchase__container_delivery_info  table{
+    border-top: 1px solid #999999;
+}
+
+.Purchase__container_User_table th,.Purchase__container_delivery_info th{
+    padding: 15px 10px 14px 20px;
+    border-top: none 0;
+    background: #f7f7f7;
+    text-align: left;
+}
+.Purchase__container_User_table td, .Purchase__container_delivery_info td{
+    height: 31px;
+    padding: 15px 10px 14px 10px;
+    color: #777777;
+    border-bottom: 1px solid #dbdbdb;
+    background: #ffffff;
+}
+
+
+input[type="text"], input[type="email"]{
+    padding: 0 10px;
+    outline: none;
+    font-size: 12px;
+    width: 220px;height: 31px;
+    padding: 0 5px;
+    color: #333333;
+    border: 1px solid #d6d6d6;
+    line-height: 31px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.Purchase__SubmitButton_wrap{
+    text-align: center;
+}
+.Purchase__SubmitButton{
+    display: inline-block;
+    width: 300px;
+    height: 61px;
+    line-height: 59px;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #ab3e55;
+    background: #ab3e55;
+    text-align: center;
+}

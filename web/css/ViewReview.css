@@ -1,0 +1,22 @@
+
+.ViewReview__Container{
+    width:1200px;
+    margin:0 auto;
+}
+.ViewReview__title{
+    padding:20px 10px 20px 10px;
+
+}
+.ViewReview__Content_title{
+    width:100%;
+    overflow: hidden;
+    padding: 15px 15px 15px 15px;
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #dbdbdb;
+    background: #f7f7f7;
+}
+.ViewReview__UserInfo{
+    overflow: hidden;
+    padding: 10px 15px 10px 15px;
+    border-bottom: 1px solid #dbdbdb;
+}

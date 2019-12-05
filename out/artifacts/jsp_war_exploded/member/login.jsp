@@ -64,9 +64,12 @@
             Kakao.API.request({
                 url: '/v1/user/me',
                 success: function(res) {
-                    console.dir(res);
-                    const Allurl = "member_process.jsp?"
-
+                    const kemail = JSON.stringify( res.kaccount_email);
+                    const kid = JSON.stringify(res.id);
+                    const kimagw = JSON.stringify(res.properties.profile_image);
+                    const kname = JSON.stringify(res.properties.nickname);
+                    const url =  "./loginProcess.jsp?kid="+kid;
+                    location.href=url;
                 },
                 fail: function(error) {
                     alert(JSON.stringify(error));

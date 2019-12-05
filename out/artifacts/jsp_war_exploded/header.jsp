@@ -55,12 +55,12 @@
             <div class = "header_bottom_icon">
             </div>
             <span class = "header_bottom_list_item"><a href = "/Product/Product_list.jsp?ProductClass=00000001">Doll</a></span>
-            <span class = "header_bottom_list_item"><a href = "/">Doll</a></span>
-            <span class = "header_bottom_list_item"><a href = "/">Doll</a></span>
-            <span class = "header_bottom_list_item"><a href = "/">Doll</a></span>
-            <span class = "header_bottom_list_item"><a href = "/">Doll</a></span>
-            <span class = "header_bottom_list_item"><a href = "/">Doll</a></span>
-            <span class = "header_bottom_list_item"><a href = "/">Doll</a></span>
+            <span class = "header_bottom_list_item"><a href = "/Product/Product_list.jsp?ProductClass=00000002">FIGURE & TOY</a></span>
+            <span class = "header_bottom_list_item"><a href = "/Product/Product_list.jsp?ProductClass=00000003">FANCY</a></span>
+            <span class = "header_bottom_list_item"><a href = "/Product/Product_list.jsp?ProductClass=00000004">ACCESSORY</a></span>
+            <span class = "header_bottom_list_item"><a href = "/Product/Product_list.jsp?ProductClass=00000005">LIVING</a></span>
+            <span class = "header_bottom_list_item"><a href = "/Product/Product_list.jsp?ProductClass=00000006">KITCHEN & BATHROOM</a></span>
+            <span class = "header_bottom_list_item"><a href = "/Product/Product_list.jsp?ProductClass=00000007">MOBILE</a></span>
         </div>
     </div>
     <script>

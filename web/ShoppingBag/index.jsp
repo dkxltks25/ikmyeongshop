@@ -34,7 +34,44 @@
     }
     .ShoppingBag__Sum_wrap div{
         float:right;
+        width:12%;
         margin-right:30px;
+    }
+    .ShoppingBag__SelectButton_wrap{
+        width:100%;
+        padding:20px 10px 20px 10px;
+    }
+    .ShoppingBag__SelectButton_wrap button{
+        margin-left:20px;
+    }
+    .ShoppingBag__SelectButton{
+        min-width: 190px;
+        height: 55px;
+        padding: 0 20px 0 20px;
+        color: #3e3d3c;
+        font-weight: bold;
+        font-size: 14px;
+        border: 1px solid #cccccc;
+        background: #fff;
+        cursor: pointer;
+        float:right;
+        border: 1px solid #404040;
+        color: #404040;
+
+    }
+    .ShoppingBag__AllButton{
+        min-width: 190px;
+        height: 55px;
+        padding: 0 20px 0 20px;
+        color: #ffffff;
+        font-size: 14px;
+        border: 1px solid #ab3e55;
+        background: #ab3e55;
+        cursor: pointer;
+        font-weight: bold;
+        background: #404040;
+        border: 1px solid #404040;
+        float:right;
     }
 </style>
     <link rel = "stylesheet" href = "http://l.bsks.ac.kr/~p201887082/php_login/assets/bootstrap/css/bootstrap.min.css"/>
@@ -89,19 +126,21 @@
                              rs = productDAO.Shopinglist(Session_User);
                         }
                         try {
-                            if(rs.next()){
+                            int SelectId = 0;
+                            while(rs.next()){
                                 int SumPrice = Integer.parseInt(rs.getString("productPrice")) * Integer.parseInt(rs.getString("ShoppingBagCount"));
+                                SelectId++;
                                 %>
                                     <tr>
                                         <td>
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck1" >
-                                                <label class="custom-control-label" for="customCheck1"><%=rs.getString("ShoppingBagId")%></label>
+                                                <input type="checkbox" class="custom-control-input ProductSelected" id="customCheck<%=SelectId%>" >
+                                                <label class="custom-control-label " for="customCheck<%=SelectId%>"><%=rs.getString("ShoppingBagId")%></label>
                                             </div>
                                         </td>
                                         <td><%=rs.getString("ProductName")%></td>
-                                        <td><%=rs.getString("ShoppingBagCount")%></td>
-                                        <td><%=rs.getString("productPrice")%></td>
+                                        <td id = "Count<%=SelectId%>"><%=rs.getString("ShoppingBagCount")%></td>
+                                        <td id = "Price<%=SelectId%>"><%=rs.getString("productPrice")%></td>
                                         <td><%=SumPrice%></td>
                                     </tr>
                                 <%
@@ -114,14 +153,25 @@
                 </table>
                 <div class = "ShoppingBag__Sum_wrap">
                     <div class = "ShoppingBag__Select">
-                        총 <span id = "SelectNumber"></span> 개의 상품 금액<br>
-                            <span id = "SelectPrice"></span>원
+                        총 <span id = "SelectNumber">0</span> 개의 상품 금액<br>
+                            <span id = "SelectPrice">0</span>원
                     </div>
                     <div class = "ShoppingBag__Arrive">
-
-                   asd </div>
-                    <div class = "ShoppingBag__All">
+                        배송비<br>
+                        2,500원
                     </div>
+                    <div class = "ShoppingBag__All">
+                        합계
+                        <span id ="SelectAllPrice"></span>
+                    </div>
+                </div>
+                <div class="ShoppingBag__SelectButton_wrap">
+                    <button class = "ShoppingBag__SelectButton">
+                        선택 상품 주문
+                    </button>
+                    <button class ="ShoppingBag__AllButton">
+                        전체 상품 주문
+                    </button>
                 </div>
             </div>
         </div>
@@ -129,5 +179,7 @@
     <footer>
         <jsp:include page="../footer.jsp"/>
     </footer>
+
+    <script src = "../js/shoppingBag.js"></script>
 </body>
 </html>

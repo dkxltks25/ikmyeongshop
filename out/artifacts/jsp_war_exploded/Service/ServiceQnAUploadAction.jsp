@@ -7,6 +7,10 @@
 --%>
 <%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
 <%@page import="com.oreilly.servlet.MultipartRequest"%>
+<%@ page import="QnA.QnADAO" %>
+<%@ page import="java.io.PrintWriter" %>
+<%@page import="java.io.File"%>
+<%@page import="java.util.Enumeration"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -14,35 +18,29 @@
 
 </head>
 <body>
+<% request.setCharacterEncoding("UTF-8"); %>
+
     <%
-        String id = "";
-        String subject = "";
-        String fileName1 = "";
-        String fileName2 = "";
-        String orgfileName1 = "";
-        String orgfileName2 = "";
+        PrintWriter script = response.getWriter();
+        String QNA = request.getRealPath("/image/Temp");
         try {
-            MultipartRequest multi = new MultipartRequest(
-                    request,"../image/ServiceQnA", // 파일을 저장할 디렉토리 지정
-                    10 * 1024, // 첨부파일 최대 용량 설정(bite) / 10KB / 용량 초과 시 예외 발생
-                    "utf-8", // 인코딩 방식 지정
-                    new DefaultFileRenamePolicy() // 중복 파일 처리(동일한 파일명이 업로드되면 뒤에 숫자 등을 붙여 중복 회피)
-            );
 
-            id = multi.getParameter("id"); // form의 name="id"인 값을 구함
-            subject = multi.getParameter("subject"); // form의 name="subject"인 값을 구함
+            MultipartRequest multi = null;
+            int maxSize = 1024 * 1024 * 10; //파일 사이즈 제한
+            QnADAO qnaDAO = new QnADAO();
+            multi = new MultipartRequest(request, QNA, maxSize, "utf-8", new DefaultFileRenamePolicy());
+            String QnA_SELECT = multi.getParameter("QnA_SELECT");
+            String QnATitle = multi.getParameter("QnATitle");
+            String QnAContent = multi.getParameter("QnAContent");
 
+            String Session_User = (String) session.getAttribute("user_id") == null ? "" : (String) session.getAttribute("user_id");
 
-
-            fileName1 = multi.getFilesystemName("file1"); // name=file1의 업로드된 시스템 파일명을 구함(중복된 파일이 있으면, 중복 처리 후 파일 이름)
-            orgfileName1 = multi.getOriginalFileName("file1"); // name=file1의 업로드된 원본파일 이름을 구함(중복 처리 전 이름)
-
-            fileName2 = multi.getFilesystemName("file2");
-            orgfileName2 = multi.getOriginalFileName("file2");
-
-        } catch (Exception e) {
-            e.getStackTrace();
-        } // 업로드 종료
+            File QnAImg = multi.getFile("fileArea");
+            out.println(QnAImg);
+        }catch (Exception e){
+            out.println(e.toString());
+            e.printStackTrace();
+        }
     %>
 
 </body>

@@ -1,0 +1,55 @@
+
+.ReviewList__Container{
+    width:1200px;
+    margin:0 auto;
+    padding:20px 10px 20px 10px;
+}
+
+.ReviewList__HeadText{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ReviewList__WriteButton{
+    display: inline-block;
+    min-width: 90px;
+    height: 31px;
+    margin: 0 0 0 5px;
+    padding: 0 10px 0 10px;
+    line-height: 29px;
+    color: #ffffff;
+    font-size: 12px;
+    border: 1px solid #979797;
+    background: #979797;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.ReviewList__Board{
+    display:flex;
+    flex-wrap:wrap;
+}
+.ReviewList_ItemBox{
+    margin:10px;
+}
+.ReviewList_ItemBox_img_wrap{
+    overflow: hidden;
+    display: table;
+    position: relative;
+    min-height: 200px;
+    text-align: center;
+    border: 6px solid #ebebeb;
+}
+
+
+.ReviewList__ItemBox_text_wrap{
+    padding: 10px 0 0 0;
+    text-align: left;
+}
+.ReviewList_ItemBox_img_wrap img{
+    height:200px;
+}
+.ReviewList__RatingArea{
+    width:100%;
+}

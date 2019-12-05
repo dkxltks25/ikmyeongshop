@@ -11,7 +11,6 @@
     ProductQDAO productQDAO = new ProductQDAO();
     ResultSet rs = reviewDAO.ProductReview(ProductNumber);
     ResultSet rs1 = productQDAO.ProductProductQ(ProductNumber);
-    out.println(rs1);
 
 %>
 
@@ -24,7 +23,7 @@
 <body>
     <div class = "ProductInfo_info">
         <p class = "imagePosition">
-            <img src = "../image/Background/1.jpg"/>
+            <img src = "../image/Background/<%=ProductNumber%>.jpg"/>
         </p>
 
     </div>
@@ -55,7 +54,7 @@
     <div class = "ProductInfo_review">
         <div class = "ProductInfo_review_button">
             <input type = "button" class = "viewAllReview" value="상품후기 전체보기">
-            <input type = "button" class = "WriteReview" onclick="window.open('../QnA',width=880, height=100)" value="상품후기 글쓰기">
+            <input type = "button" class = "WriteReview" onclick="window.open('../Review',width=700, height=400,menubar='no', status='no', toolbar='no')" value="상품후기 글쓰기">
         </div>
         <div class = "ProductInfo_review_list">
             <h4>상품후기</h4>
@@ -65,17 +64,41 @@
                 </thead>
                 <tbody>
                 <%
-                    if(rs == null) {
+
+                    if(!rs.isBeforeFirst()) {
                         %>
                             <tr>
-                                <td colspan='4'>등록된 상품이 없습니다.</td>
+                                <td colspan='4' style="text-align: center">등록된 상품후기가 없습니다.</td>
                             </tr>
                         <%
+                    }else{
+                        %>
+                            <tr>
+                                <th>평점</th>
+                                <th>제목</th>
+                                <th>아이디</th>
+                                <th>등록일자</th>
+                            </tr>
+                    <%
                     }
                     while(rs.next()){
                     %>
                         <tr>
-                        <td><%=rs.getString("productgrade")%></td>
+                        <td>
+                            <%
+                                for(int i = 0; i <=5;i++){
+                                        if(i <= rs.getInt("ProductGrade")-1){
+                                            %>
+                                                <span class="fa fa-star checked"></span>
+                                            <%
+                                            }else{
+                                                %>
+                                                  <span class="fa fa-star"></span>
+                                                <%
+                                            }
+                                }
+                            %>
+                        </td>
                         <td><%=rs.getString("reviewtitle")%></td>
                         <td><%=rs.getString("userId")%></td>
                         <td><%=rs.getString("createAt")%></td>
@@ -100,11 +123,12 @@
             <table class="table">
                 <thead>
                     <%
-                    if(rs1 == null) {
-                        %>
-                <tr>
-                    <td colspan='4'>등록된 상품문의가 없습니다..</td>
-                </tr>
+                   if(!rs.isBeforeFirst())
+                   {
+                     %>
+                    <tr>
+                        <td colspan='4' style="text-align: center">등록된 문의가 없습니다.</td>
+                    </tr>
                     <%
                     }
                     while(rs.next()){

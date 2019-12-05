@@ -23,14 +23,14 @@ public class ReviewDAO {
             e.printStackTrace();
         }
     }
-    public int InsertReview(  String UserId, String ProductGrade, String Reviewtitle, String ReviewContent){
-        String Sql = "insert into review(UserId,ProductId, productgrade, reviewtitle, reviewcontent,createAt,updateAt) values (?,?,?,?, ?,now(),now());";
+    public int InsertReview(  String UserId, String ProductId,String ProductGrade, String Reviewtitle, String ReviewContent){
+        String Sql = "INSERT INTO REVIEW(UserId, ProductGrade, ProductId, ReviewTitle, ReviewContent, createAt, updateAt) values (?,?,?,?,?,now(),now())";
         try{
             pstmt = conn.prepareStatement(Sql);
             pstmt.setString(1,UserId);
             pstmt.setString(2,ProductGrade);
-            pstmt.setString(3,Reviewtitle);
-            pstmt.setString(4,ReviewContent);
+            pstmt.setString(3,ProductId);
+            pstmt.setString(4,Reviewtitle);
             pstmt.setString(5,ReviewContent);
             return pstmt.executeUpdate();
         } catch (SQLException e) {
@@ -45,6 +45,18 @@ public class ReviewDAO {
             pstmt.setString(1, UserId);
             rs = pstmt.executeQuery();
             return rs;
+        }catch(Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public ResultSet ViewReview(String ReviewId){
+        String Sql = "SELECT * FROM REVIEW WHERE REVIEWid = ?";
+        try{
+            pstmt = conn.prepareStatement(Sql);
+            pstmt.setString(1,ReviewId);
+            return pstmt.executeQuery();
         }catch(Exception e){
             e.printStackTrace();
             return null;
@@ -73,4 +85,65 @@ public class ReviewDAO {
             return null;
         }
     }
+
+    public int ReturnReviewNumber(){
+        String Sql = "SELECT reviewId FROM REVIEW order by reviewId desc limit 1;";
+        try{
+            pstmt = conn.prepareStatement(Sql);
+            rs = pstmt.executeQuery();
+            return Integer.parseInt(rs.getString(1));
+        }catch(Exception e){
+            e.printStackTrace();
+            return 0;
+        }
+    }
+
+    public void UpdateReviewCount(String ReviewId){
+        String Sql = "update Review Set reviewCount = reviewCount+1 Where ReviewId = ?";
+        try{
+            pstmt =conn.prepareStatement(Sql);
+            pstmt.setString(1,ReviewId);
+            pstmt.executeUpdate();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+    }
+    public ResultSet ReviewUserInfo(String ProductId){
+        String Sql ="SELECT U.* FROM PRODUCT AS P\n" +
+                "\tINNER JOIN REVIEW AS R\t\n" +
+                "\t\tON P.PRODUCTID = R.PRODUCTID\n" +
+                "\t\t\tINNER JOIN USERS AS U\n" +
+                "\t\t\t\tON U.USERID = R.USERID " +
+                "where P.ProductId = ?";
+        try{
+            pstmt = conn.prepareStatement(Sql);
+            pstmt.setString(1,ProductId);
+            return pstmt.executeQuery();
+        }catch(Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+    public ResultSet GraphUserReview(String Day,String ProductId){
+        String Sql= "SELECT if(count(*)=1,count(*)-1,count(*)) as Data ,D.id  DAY FROM PRODUCT AS P\n" +
+                "\tINNER JOIN REVIEW AS R\t\n" +
+                "\t\tON P.PRODUCTID = R.PRODUCTID\n" +
+                "\t\t\tINNER JOIN USERS AS U\n" +
+                "\t\t\t\tON U.USERID = R.USERID\n" +
+                "\t\t\t\t\t\tRight join DateTimetable as D\n" +
+                "\t\t\t\t\t\t\tON date_format(U.createAt,\"%m\") = D.id\n" +
+                "\t\t\t\t\t\t\t\twhere date_format(U.createAt,\"%m\") is null OR date_format(U.createAt,\"%m\") = ? AND D.id <= LAST_DAY('2019-"+Day+"-01')\n AND P.ProductId = ?" +
+                "\tGROUP BY D.id;\t";
+        try{
+            pstmt = conn.prepareStatement(Sql);
+            pstmt.setString(1,Day);
+            pstmt.setString(2,ProductId);
+            return pstmt.executeQuery();
+        }catch(Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 }

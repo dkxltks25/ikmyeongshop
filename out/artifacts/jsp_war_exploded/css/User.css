@@ -44,3 +44,34 @@ a{
     background: #ab3e55;
     text-align: center;
 }
+
+.Userdelete__button{
+    display: inline-block;
+    min-width: 46px;
+    min-height: 18px;
+    margin: 5px 0 0 0;
+    padding: 3px 10px 4px 10px;
+    color: #3e3d3c;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    text-align: center;
+}
+
+.QnA__OpenButton{
+    float:right;
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    min-width: 90px;
+    height: 31px;
+    margin: 0 0 0 5px;
+    padding: 0 10px 0 10px;
+    line-height: 29px;
+    color: #ffffff;
+    font-size: 12px;
+    border: 1px solid #979797;
+    background: #979797;
+    text-align: center;
+    vertical-align: middle;
+}

@@ -46,12 +46,12 @@
         </div>
     </header>
     <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-        <a class="mdl-navigation__link" href="/IkmyeongshopAdmin"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-        <a class="mdl-navigation__link" href="/IkmyeongshopAdmin/User"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Inbox</a>
-        <a class="mdl-navigation__link" href="/IkmyeongshopAdmin/Product"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Trash</a>
-        <a class="mdl-navigation__link" href="/IkmyeongshopAdmin/Purchase"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Spam</a>
-        <a class="mdl-navigation__link" href="/IkmyeongshopAdmin/QnA"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Forums</a>
-        <a class="mdl-navigation__link" href="/IkmyeongshopAdmin/Notice"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Updates</a>
+        <a class="mdl-navigation__link" href="/IkmyeongshopAdmin"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>메인페이지</a>
+        <a class="mdl-navigation__link" href="/IkmyeongshopAdmin/User"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>이용자</a>
+        <a class="mdl-navigation__link" href="/IkmyeongshopAdmin/Product"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">add_shopping_cart</i>상품</a>
+        <a class="mdl-navigation__link" href="/IkmyeongshopAdmin/Purchase"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">money</i>구매</a>
+        <a class="mdl-navigation__link" href="/IkmyeongshopAdmin/QnA"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">call_made</i>문의</a>
+        <a class="mdl-navigation__link" href="/IkmyeongshopAdmin/Notice"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>공지사항</a>
         <div class="mdl-layout-spacer"></div>
         <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
     </nav>

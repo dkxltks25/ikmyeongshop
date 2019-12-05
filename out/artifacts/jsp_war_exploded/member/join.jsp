@@ -27,69 +27,20 @@
                     <div class = "join_member_text">
                         <span>기본정보</span>
                     </div>
-                    <div class = "join_table">
-                        <table border="0" cellspacing="0" cellpadding="0">
+                    <div class = "join__info_sec">
+                        <table border="0" cellpadding="0" cellspacing="0">
                             <colgroup>
                                 <col width="25%">
                                 <col width="75%">
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th><span>아이디</span></th>
-                                    <td>
-                                        <div class = "member_info">
-                                            <input type="text" id="userId" name="userId"/>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th><span>비밀번호 </span></th>
-                                    <td>
-                                        <div class = "member_info">
-                                            <input type="password" id="userPassword" name="userPassword"/>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th><span>비밀번호 확인</span></th>
-                                    <td>
-                                        <div class = "member_info">
-                                            <input type="password" id="user_repass" name="userRepass"/>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th><span>이름</span></th>
-                                    <td>
-                                        <div class = "member_info">
-                                            <input type="text" id="user_name" name="userName"/>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th><span>이메일</span></th>
-                                    <td>
-                                        <div class = "member_info">
-                                            <input type="text" id="user_email" name="userEmail"/>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th><span>전화번호</span></th>
-                                    <td>
-                                        <div class = "member_info">
-                                            <input type="text" id="user_phone" name="userPhone"/>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th><span>주소</span></th>
-                                    <td>
-                                        <div class = "member_info">
-                                            <input type="text" id="user_adress" name="userZipCode"/>
-                                            <input type="button" id="user_adress0" name="userAddress0"/>
-                                            <input type="text" id="user_adress1" name="userAddress1"/>
-                                            <input type="text" id="user_adress2 name="userAddress2"/>
+                                    <th>
+                                        <span>아이디</span>
+                                    </th>
+                                    <td class = "table_td">
+                                        <div>
+                                            <input type = "text" id = "memberId" name = "" mainlength = "4" maxlength="8" required>
                                         </div>
                                     </td>
                                 </tr>

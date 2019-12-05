@@ -23,6 +23,11 @@ window.addEventListener("hashchange",(event)=>{
             for(let i = 0; i<all.length;i++){
                 if(all[i].className === `ProductInfo_${HashArray[HashArray.indexOf(HashValue)]}`){
                     image[0].innerHTML = all[i].innerHTML;
+                    const MoveAllView = document.getElementsByClassName("viewAllReview")[0];
+                    if(MoveAllView !== null || MoveAllView !== undefined){
+                        MoveAllView.addEventListener('click',()=>location.href="../Review/ReviewList.jsp");
+                    }
+
                 }
             }
         })
@@ -33,6 +38,7 @@ window.addEventListener("hashchange",(event)=>{
 
 
 window.onload = ()=>{
+    
     const [UpButton,DownButton] =document.getElementsByClassName('product_view_price_btn');
     const Input = document.getElementById("product_view_price_count");
     const Product_price = document.getElementById("product_price");
@@ -41,6 +47,8 @@ window.onload = ()=>{
     const MoveShoppingBag = document.getElementById("MoveShoppingBag");
     const MovePurchase = document.getElementById('MovePurchase');
     const MoveAttention = document.getElementById("MoveAttention");
+
+
     UpButton.addEventListener('click',()=>{
         const Count_price = (parseInt(Input.value)+1) * price;
         Input.value =  parseInt(Input.value)+1;
@@ -57,6 +65,30 @@ window.onload = ()=>{
             Product_sum_price.innerHTML = Count_price;
         }
     });
+
     MoveShoppingBag.addEventListener('click',()=>location.href=`/ShoppingBag?ProductNumber=${productNumber}&ItemCount=${Input.value}`);
-    MoveAttention.addEventListener('click',()=>location.href="");
-}
+    MoveAttention.addEventListener('click',()=>location.href=`../Product/AttentionAction.jsp?ProductNumber=${productNumber}`);
+    MovePurchase.addEventListener('click',CreateForm);
+};
+
+const CreateForm = () =>{
+    const Form = document.createElement('form');
+    Form.setAttribute("charset", "UTF-8");
+    Form.setAttribute("method", "Post");
+    Form.setAttribute("action", "/Purchase/");
+
+    const hiddenField = document.createElement("input");
+    hiddenField.setAttribute("type", "hidden");
+    hiddenField.setAttribute("name", "ProductId");
+    hiddenField.setAttribute("value", productNumber);
+    const hiddenProductCount = document.createElement("input");
+    hiddenProductCount.setAttribute("type","hidden");
+    hiddenProductCount.setAttribute("name", "PurchaseCount");
+    hiddenProductCount.setAttribute("value",document.getElementById("product_view_price_count").value);
+
+    Form.appendChild(hiddenField);
+    Form.appendChild(hiddenProductCount);
+    document.body.appendChild(Form);
+    Form.appendChild(hiddenField);
+    Form.submit();
+};

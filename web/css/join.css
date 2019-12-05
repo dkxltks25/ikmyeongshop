@@ -33,56 +33,42 @@
 }
 
 .join_container_form_wrap{
-    width:800px;
-    margin:150px auto;
+    width: 743px;
+    margin: 0 auto;
+    border: none;
 }
 
 .join_table{
     width:100%;
 }
-table {
-     border-collapse: separate;
-     border-spacing: 2px;
- }
-body, th, td, input, select, textarea, button {
-      font-size: 12px;
-      line-height: 1.5;
-      font-family: Malgun Gothic,"맑은 고딕",AppleGothic,Dotum,"돋움",sans-serif;
-      color: #333;}
+.join_member_wrap{
+    width: 743px;
+    margin: 0 auto;
+    border: none;
+    padding: 70px 60px;
+    border: 1px solid #dbdbdb;
+}
+.join__info_sec{
+    border-top: 1px solid #999999;
+}
 
-table th{
-    padding: 10px 25px;
+.join__info_sec th{
     text-align: left;
     border-bottom: 1px solid #dcdcdc;
     background: #fbfbfb;
+    padding: 10px 25px;
 }
-
-input[type="text"]{
-    width:380px;
+.table_td{
+    padding: 15px 0 15px 15px;
+    border-bottom: 1px solid #dcdcdc;
 }
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"]{
     padding: 0 10px;
     outline: none;
     font-size: 12px;
     height: 31px;
+    padding: 0 5px;
     color: #333333;
     border: 1px solid #d6d6d6;
-}
-input{
-    vertical-align: middle;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    -webkit-appearance: textfield;
-    background-color: white;
-}
-tr{
-    display: table-row;
-    vertical-align: inherit;
-    border-color: inherit;
-    width:743px;
+    line-height: 31px;
 }

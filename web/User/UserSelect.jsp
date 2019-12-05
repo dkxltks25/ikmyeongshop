@@ -60,12 +60,18 @@
                         while(rs.next()){
                             %>
                             <tr>
-                                <td><%=rs.getString("AttentionId")%></td>
-                                <td><%=rs.getString("productName")%></td>
-                                <td><%=rs.getString("productPrice")%></td>
-                                <td><%=rs.getString("ProductId")%></td>
+
                                 <td>
-                                    <button class="UserSelect__button">장바구니</button>
+                                    <%=rs.getString("AttentionId")%>
+                                </td>
+                                <td>
+                                    <img style = "height:96px;float:left;"src="../image/Thumbnail/<%=rs.getString("ProductId")%>.jpg"/>
+                                    <%=rs.getString("productName")%></td>
+                                <td><%=rs.getString("ProductCount")%></td>
+                                <td><%=rs.getString("Productprice")%></td>
+                                <td>
+                                    <button class="UserSelect__button">장바구니</button><br>
+                                    <button class="Userdelete__button">삭제하기</button>
                                 </td>
                             </tr>
                             <%
@@ -82,6 +88,7 @@
     </div>
     <div class = "User__QnA">
         <h4>1대1문의</h4>
+        <button class = "QnA__OpenButton">1:1문의하기 </button>
         <div class="col-12">
             <table class="table table-bordered">
                 <thead>

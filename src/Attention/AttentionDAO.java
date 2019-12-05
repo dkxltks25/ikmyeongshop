@@ -59,7 +59,7 @@ public class AttentionDAO {
     }
 
     public ResultSet AttentionList (String UserId){
-        String Sql = "SELECT a.AttentionId,p.productName, p.productPrice,P.ProductId FROM Attention As a"
+        String Sql = "SELECT a.AttentionId,p.productName, p.productPrice,P.ProductId, p.ProductCount FROM Attention As a"
                         + " inner join Users As U"
                             + " on a.UserId = U.UserId"
                                 +" inner join Product AS p"
@@ -68,6 +68,27 @@ public class AttentionDAO {
         try{
             pstmt = conn.prepareStatement(Sql);
             pstmt.setString(1, UserId);
+            return pstmt.executeQuery();
+        }catch(Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    //이번달에서 가장 많은 관심을 가진 상품
+    public ResultSet BestAttention (String Day){
+        String Sql = "SELECT count(if(A.AttentionId is not null,A.AttentionId,null)) As Count,P.* FROM attention As A\n" +
+                "\tright join datetimeTable As D\n" +
+                "\t\ton D.id = date_format(A.createAt,\"%d\")\n" +
+                "\t\t\tinner join Product AS P\n" +
+                "\t\t\t\ton P.ProductId = A.ProductId\n" +
+                "\t\t\twhere date_format(A.createAt,\"%m\") = 12 Or date_format(A.createAt,\"%d\") is null\n" +
+                "\t\t\tgroup by D.id\n" +
+                "\t\t\t\thaving count !=0\n" +
+                "\t\t\t\t\torder by Count desc;";
+        try{
+            pstmt = conn.prepareStatement(Sql);
+            pstmt.setString(1,Day);
             return pstmt.executeQuery();
         }catch(Exception e){
             e.printStackTrace();

@@ -1,29 +1,56 @@
 <%@ page import="Product.ProductDAO"%>
-<%@ page import="java.sql.ResultSet" %><
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.util.ArrayList" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:useBean id="product" class="Product.Product" scope="page" />
 <html>
 <head>
     <link rel = "stylesheet" href = "../css/ProductView.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel = "stylesheet" href = "http://l.bsks.ac.kr/~p201887082/DiliManage/css/bootstrap.css"/>
     <%
         String ProductNumber = request.getParameter("ProductNumber");
-        session.setAttribute("ProductNumber",ProductNumber);
-        String price="";
         ProductDAO productDAO = new ProductDAO();
+        session.setAttribute("ProductNumber",ProductNumber);
+        String ProductName = "";
+        String ProductClass = "";
+        String ProductCount = "";
+        String ProductDiscount = "";
+        String ProductPrice = "";
+        String price = "";
+
+
+        ArrayList<String> list = (ArrayList)session.getAttribute("UserViewProductList");
+        if(list==null)
+        {
+            list = new ArrayList<String>();
+            list.add(ProductNumber);
+            session.setAttribute("UserViewProductList", list);
+        }
+        else{
+            int i;
+            int check = 0;
+            for(i = 0; i < list.size();i++){
+                if(list.get(i).equals(ProductNumber)){
+                    check = 1;
+                }
+            }
+            if(check == 0){
+                list.add(ProductNumber);
+                productDAO.ProductViewCount(ProductNumber);
+                session.setAttribute("UserViewProductList", list);
+            }
+        }
+
         ResultSet rs = productDAO.SelectProduct(ProductNumber);
         if(rs.next()){
-            out.println(rs.getString("ProductId"));
-            out.println(rs.getString("ProductName"));
-            out.println(rs.getString("ProductClass"));
-            out.println(rs.getString("ProductCount"));
-            out.println(rs.getString("ProductDiscount"));
-            out.println(rs.getString("ProductPrice"));
-            price = rs.getString("ProductPrice");
-
-            out.println(rs.getString("CreateAt"));
-            out.println(rs.getString("UpdateAt"));
-
+             ProductName = rs.getString("ProductName");
+             ProductClass = rs.getString("ProductClass");
+             ProductCount = rs.getString("ProductCount");
+             ProductDiscount = rs.getString("ProductDiscount");
+             ProductPrice = rs.getString("ProductPrice");
+             price = rs.getString("ProductPrice");
         }
 
     %>
@@ -31,6 +58,7 @@
     <script>
         let price = "<%=price%>";
         let productNumber = "<%=ProductNumber%>";
+
     </script>
 </head>
 <body>
@@ -51,7 +79,7 @@
                     <img src ="../image/Thumbnail/<%=ProductNumber%>.jpg"/>
                 </div>
                 <div class = "product_view_option">
-                    <h3>말랑말랑 고명이 인형</h3>
+                    <h3><%=ProductName%></h3>
                     <div class = "product_view_options">
                         <div class = "product_view_option_line">
                             <div class = "first_info">판매가</div>
@@ -93,7 +121,7 @@
                             <div class = "first_info">상품번호</div>
                             <div class = "second_info">
                                 <strong>
-                                    1
+                                    <%=ProductNumber%>
                                 </strong>
                             </div>
                         </div>
@@ -102,7 +130,7 @@
                             <div class = "first_info">상품재고</div>
                             <div class = "second_info">
                                 <strong>
-                                    96개
+                                    <%=ProductCount%>
                                 </strong>
                             </div>
                         </div>
@@ -110,7 +138,7 @@
                         <div class = "product_view_price_line">
                             <div class = "product_view_price_name">
                                 <strong>
-                                    말랑말랑 고명이 인형
+                                    <%=ProductName%>
                                 </strong>
                             </div>
 
@@ -168,7 +196,12 @@
 
                 </div>
                 <div class = "item_view">
+                    <div class = "ProductInfo_info">
+                        <p class = "imagePosition">
+                            <img src = "../image/Background/<%=ProductNumber%>.jpg"/>
+                        </p>
 
+                    </div>
                 </div>
 
             </div>
