@@ -5,47 +5,73 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.ResultSetMetaData" %>
 <%@ page import="netscape.javascript.JSObject" %>
+<%@ page import="Purchase.PurchaseDAO" %>
+<%@ page import="Attention.AttentionDAO" %>
+<%@ page import="Product.ProductDAO" %>
 <%
-    String State = request.getParameter("State");
-    String ProductId = request.getParameter("ProductId");
+    String State = request.getParameter("state");
+    String ProductId = request.getParameter("id");
     String Day = request.getParameter("day");
-    ReviewDAO reviewDAO = new ReviewDAO();
     JSONArray jArray = new JSONArray();
-
+    ResultSet rs = null;
+    if(State.equals("PurchaseList")){
+        PurchaseDAO purchaseDAO =new PurchaseDAO();
+        rs = purchaseDAO.ProductPurchaseList(ProductId);
+        while(rs.next()){
+            JSONArray jObject = new JSONArray();
+            jObject.add(rs.getString("PurchaseId"));
+            jObject.add(rs.getString("UserId"));
+            jObject.add(rs.getString("PurchaseProductCount"));
+            jObject.add(rs.getString("PurchaseProductPrice"));
+            jObject.add(rs.getString("UserName"));
+            jObject.add(rs.getString("createAt"));
+            jArray.add(jObject);
+        }
+        response.setContentType("application/json");
+        out.println(jArray.toString());
+    }
+    if(State.equals("AttentionList")) {
+        AttentionDAO attentionDAO = new AttentionDAO();
+        rs = attentionDAO.ProductAttentionList(ProductId);
+        while(rs.next()){
+            JSONArray jObject = new JSONArray();
+            jObject.add(rs.getString(1));
+            jObject.add(rs.getString(2));
+            jObject.add(rs.getString(3));
+            jObject.add(rs.getString(4));
+            jArray.add(jObject);
+        }
+        response.setContentType("application/json");
+        out.println(jArray.toString());
+    }
+    if(State.equals("ShoppingBagList")){
+        ProductDAO productDAO = new ProductDAO();
+        rs = productDAO.ProductShoppingBagList(ProductId);
+        while(rs.next()){
+            JSONArray jObject = new JSONArray();
+            jObject.add(rs.getString(1));
+            jObject.add(rs.getString(2));
+            jObject.add(rs.getString(3));
+            jObject.add(rs.getString(4));
+            jArray.add(jObject);
+        }
+        response.setContentType("application/json");
+        out.println(jArray.toString());
+    }
     if(State.equals("ReviewList")){
-        ResultSet rs = reviewDAO.ReviewUserInfo(ProductId);
-        String [] UserList;
-        int i = 0;
+        ReviewDAO reviewDAO = new ReviewDAO();
+        rs =reviewDAO.ProductReviewList(ProductId);
         while(rs.next()){
-            JSONArray arrayObj=new JSONArray();
-            arrayObj.add(rs.getString("userid"));
-            arrayObj.add(rs.getString("userpassword"));
-            arrayObj.add(rs.getString("useremail"));
-            arrayObj.add(rs.getString("userphone"));
-            arrayObj.add(rs.getString("username"));
-            arrayObj.add(rs.getString("userZipcode"));
-            arrayObj.add(rs.getString("userAdress"));
-            arrayObj.add(rs.getString("createAt"));
-            arrayObj.add(rs.getString("updateAT"));
-            jArray.add(arrayObj);
+            JSONArray jObject = new JSONArray();
+            jObject.add(rs.getString(1));
+            jObject.add(rs.getString(2));
+            jObject.add(rs.getString(3));
+            jObject.add(rs.getString(4));
+            jArray.add(jObject);
         }
         response.setContentType("application/json");
         out.println(jArray.toString());
     }
-    if(State.equals("ReviewGraph")){
-        ResultSet rs = reviewDAO.GraphUserReview(Day,ProductId);
-        int i = 0;
-        while(rs.next()){
-            JSONArray arrayObj=new JSONArray();
-            arrayObj.add(rs.getString(1));
-            arrayObj.add(rs.getString(2));
-            jArray.add(arrayObj);
-            i=i+1;
-        }
-        response.setContentType("application/json");
-        out.println(jArray.toString());
-    }
-
 
 
 %>

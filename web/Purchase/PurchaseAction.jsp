@@ -43,10 +43,13 @@
     }
     else{
         PrintWriter script = response.getWriter();
-        String ProductId = request.getParameter("ProductId");
+
         String UserId = request.getParameter("UserId");
-        String PurchaseProductCount = request.getParameter("PurchaseProductCount");
-        String PurchaseProductPrice = request.getParameter("PurchaseProductPrice");
+        String[] ProductId = request.getParameter("ProductId").split(",");
+        String[] PurchaseProductCount = request.getParameter("PurchaseProductCount").split(",");
+        String[] PurchaseProductPrice = request.getParameter("PurchaseProductPrice").split(",");
+
+
         String PurchaseZipCode = request.getParameter("PurchaseZipCode");
         String PurchaseAddress = request.getParameter("PurchaseAddress");
         String PurchaseFullAddress = request.getParameter("PurchaseFullAddress");
@@ -55,7 +58,7 @@
         String PurchaseMemo = request.getParameter("PurchaseMemo");
         PurchaseDAO purchaseDAO = new PurchaseDAO();
         int result = purchaseDAO.InsertPurchaseData(ProductId, UserId, PurchaseProductCount, PurchaseProductPrice, PurchaseZipCode, PurchaseAddress, PurchaseFullAddress, PurchaseRecipient, PurchasePhone, PurchaseMemo);
-        if(result == 1){
+        if(result != -1){
             script.println("<script>");
             script.println("alert('등록되었습니다.')");
             script.println("location.href='../User/';");

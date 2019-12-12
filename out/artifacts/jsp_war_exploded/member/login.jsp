@@ -37,7 +37,6 @@
                 <div class = "login_sns_box">
                     <a id="kakao-login-btn"></a>
                     <a href="http://developers.kakao.com/logout"></a>
-                    <a class = "snsBox" href = "/">naverlogin</a>
                 </div>
 
                 <div class = "login__box_button">

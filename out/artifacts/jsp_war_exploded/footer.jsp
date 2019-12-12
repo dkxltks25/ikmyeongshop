@@ -19,9 +19,11 @@
         </div>
     </div>
 
-    <script src = "http://localhost:8080/js/instagram.js"></script>
+
     <div class = "footer_menu">
 
     </div>
+<script src ="http://l.bsks.ac.kr/~p201887082/DiliManage/js/jq.js"></script>
+    <script src = "http://localhost:8080/js/instagram.js"></script>
 </body>
 </html>

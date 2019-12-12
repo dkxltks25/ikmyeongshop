@@ -90,3 +90,6 @@ a{
 .product_list_button button{
     margin-left:10px;
 }
+.product_list_form_sort_item{
+    cursor: pointer;
+}

@@ -25,15 +25,16 @@
     <style>
         .mui__UserDetail{
             display:flex;
-            justify-content: space-between;
         }
         .mui__UserDetail_left{
-            width:50%;
-            float:left;
+            width:400px;
         }
         .mui__UserDetail_img{
             width:400px;
             height:400px;
+        }
+        .mui__UserDetail_info{
+            width:50%;
         }
     </style>
 
@@ -45,9 +46,10 @@
     String UserId = request.getParameter("UserId");
     UserDAO userDAO = new UserDAO();
     ResultSet rs = userDAO.SelectUser(UserId);
-
-
 %>
+<script>
+    const UserId = "<%=UserId%>";
+</script>
 <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
     <jsp:include page="../Drawer.jsp"/>
     <main class="mdl-layout__content mdl-color--grey-100">
@@ -67,68 +69,115 @@
                     %>
 
                     <div class = "mui__UserDetail_img">
-                        <img style="height:100%"src = "../image/<%=imgsrc%>"/>
+                        <img style="height:100%" src = "../image/<%=imgsrc%>"/>
 
                     </div>
+                </div>
                     <div class = "mui__UserDetail_info">
-                        <div class ="mui__UserNumber">
-                            <%=rs.getString("UserNumber")%>
-                        </div>
-                        <div class = "mui__UserId">
-                            <%=rs.getString("UserId")%>
-                        </div>
-                        <div class="mui__UserName">
-                            <%=rs.getString("userName")%>
-                        </div>
-                        <div class="mui__UserEmail">
-                            <%=rs.getString("userEmail")%>
-                        </div>
-                        <div class="mui__UserPhone">
-                            <%=rs.getString("userPhone")%>
-                        </div>
-                        <div class="mui__UserAddress">
-                            <%=rs.getString("userZipCode")%>
+                        <table class="mui-table mui-table--bordered">
+                        <tr class ="mui__UserInfoList">
+                            <td>사용자 고유 아이디</td>
+                            <td><%=rs.getString("UserNumber")%></td>
+                        </tr>
+                        <tr class = "mui__UserId">
+                            <td>사용자 아이디</td>
+
+                            <td><%=rs.getString("UserId")%></td>
+                        </tr>
+                        <tr class="mui__UserName">
+                            <td>사용자 이름</td>
+                            <td><%=rs.getString("userName")%></td>
+                        </tr>
+                        <tr class="mui__UserEmail">
+                            <td>사용자 이메일</td>
+                            <td><%=rs.getString("userEmail")%></td>
+                        </tr>
+                        <tr class="mui__UserPhone">
+                            <td>사용자 전화번호</td>
+                            <td><%=rs.getString("userPhone")%></td>
+                        </tr>
+                        <tr class="mui__UserAddress">
+                            <td>사용자 주소</td>
+                            <td> <%=rs.getString("userZipCode")%>
                             <br>
-                            <%=rs.getString("UserAdress")%>
-                        </div>
-                        <div class ="mui__CreateAt">
-                            <%=rs.getString("createAt")%>
-                        </div>
-                        <div class="mui__UpdateAt">
-                            <%=rs.getString("updateAt")%>
-                        </div>
+                            <%=rs.getString("UserAdress")%></td>
+                        </tr>
+                        <tr class ="mui__CreateAt">
+                            <td>계정 생성일</td>
+                           <td> <%=rs.getString("createAt")%></td>
+                        </tr>
+
+                        </table>
                     </div>
                     <%
                         }
                     %>
-                </div>
                 <div class = "mui__UserDetail_right">
 
                     <ul class="mui-tabs__bar">
-                        <li class="mui--is-active"><a data-mui-toggle="tab" data-mui-controls="pane-events-1">구매목록</a></li>
-                        <li><a data-mui-toggle="tab" data-mui-controls="pane-events-2">사용자 찜목록</a></li>
-                        <li><a data-mui-toggle="tab" data-mui-controls="pane-events-3">사용자 쇼핑백 목록</a></li>
-                        <li><a data-mui-toggle="tab" data-mui-controls="pane-events-4">사용자 리뷰목록</a></li>
-                        <li><a data-mui-toggle="tab" data-mui-controls="pane-events-5">사용자 후기목록</a></li>
+                        <li class = "UserDetail__SelectPanel mui--is-active"><a data-mui-toggle="tab" data-mui-controls="pane-events-1">구매목록</a></li>
+                        <li class = "UserDetail__SelectPanel"><a data-mui-toggle="tab" data-mui-controls="pane-events-2">사용자 찜목록</a></li>
+                        <li class = "UserDetail__SelectPanel"><a data-mui-toggle="tab" data-mui-controls="pane-events-3">사용자 쇼핑백 목록</a></li>
+                        <li class = "UserDetail__SelectPanel"><a data-mui-toggle="tab" data-mui-controls="pane-events-4">사용자 리뷰목록</a></li>
+                        <li class = "UserDetail__SelectPanel"><a data-mui-toggle="tab" data-mui-controls="pane-events-5">사용자 후기목록</a></li>
                     </ul>
                     <!--구매목록-->
-                    <div class="mui-tabs__pane mui--is-active" id="pane-events-1">
-                        리스트보기/통계보기
-                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
-                            <input type="checkbox" id="switch-1" class="mdl-switch__input" checked>
+                    <div class="mui-tabs__pane mui--is-active  " id="pane-events-1">
+                        <table class="mui-table mui-table--bordered UserTable">
+                            <thead>
+                                <tr>
+                                    <th>구매상품번호</th>
+                                    <th>상품명</th>
+                                    <th>구입가격</th>
+                                    <th>구입수량</th>
+                                    <th>구입일</th>
+                                </tr>
+                            </thead>
 
-
-
-
-
-                            <span class="mdl-switch__label"></span>
-                        </label>
-
+                        </table>
                     </div>
-                    <div class="mui-tabs__pane" id="pane-events-2">Pane-2</div>
-                    <div class="mui-tabs__pane" id="pane-events-3">Pane-3</div>
-                    <div class="mui-tabs__pane" id="pane-events-4">Pane-31</div>
-                    <div class="mui-tabs__pane" id="pane-events-5">Pane-31</div>
+                    <div class="mui-tabs__pane " id="pane-events-2">
+                        <table class="mui-table mui-table--bordered UserTable ">
+                            <thead>
+                            <tr>
+                                <th>관심 상품 아이디</th>
+                                <th>상품이름</th>
+                                <th>상품가격</th>
+                                <th>상품번호</th>
+                                <th>상품재고</th>
+                            </tr>
+                            </thead>
+
+                        </table>
+                    </div>
+                    <div class="mui-tabs__pane " id="pane-events-3">
+                        <table class="mui-table mui-table--bordered  UserTable">
+                            <thead>
+                            <tr>
+                                <th>쇼핑백 아이디</th>
+                                <th>담은 상품수</th>
+                                <th>상품이름</th>
+                                <th>상품아이디</th>
+                                <th>상품가격</th>
+
+
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="mui-tabs__pane " id="pane-events-4">
+                        <table class="mui-table mui-table--bordered UserTable">
+                            <thead>
+                            <th>리뷰번호</th>
+                            <th>사용자아이디</th>
+                            <th>평점</th>
+                            <th>상품아이디</th>
+                            <th>리뷰 제목</th>
+                            </thead>
+
+                        </table>
+                    </div>
+                    <div class="mui-tabs__pane " id="pane-events-5">Pane-31</div>
                 </div>
              </div>
             </div>
@@ -164,5 +213,7 @@
     var toggleEls = document.querySelectorAll('');
     console.log(toggleEls);
 </script>
+<script src = "../js/UserDetail.js"></script>
+<script src ="http://l.bsks.ac.kr/~p201887082/DiliManage/js/jq.js"></script>
 </body>
 </html>

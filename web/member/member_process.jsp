@@ -23,6 +23,7 @@
         String password= request.getParameter("userPassword");
         String name = request.getParameter("userName");
         String phone = request.getParameter("userPhone");
+        out.println(phone);
         String email = request.getParameter("userEmail");
         String zipcode = request.getParameter("userZipCode");
         String adress = request.getParameter("userAddress1");

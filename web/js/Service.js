@@ -1,24 +1,34 @@
 
-const List = ["notice","QnA","FAQ"];
-window.addEventListener("hashchange",(event)=>{
-    console.log(1);
-    const Position = document.location.href.split("#")[1];
-    const ViewList = document.getElementsByClassName("Service__container_content")[0];
-    fetch('../Service/ServiceView.jsp')
-        .then(body=>body.text())
-        .then(function(html) {
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, "text/html");
-            return doc;
-        })
-        .then(doc=>{
-            const {all} = doc;
-            console.dir(all);
-            for(let i = 0; i<all.length;i++){
-                if(all[i].className === `ServiceView__${List[List.indexOf(Position)]}`){
-                    ViewList.innerHTML = all[i].innerHTML;
+window.onload = () =>{
+    const tr = document.querySelectorAll("tr");
+    for(let i = 0; i<tr.length;i++){
+        tr[i].addEventListener('click',()=>{
+            const {dataset:{id}} = tr[i];
+            $.ajax({
+                url:"ServiceNoticeAction.jsp",
+                data:{id},
+                dataType:"Text",
+                success: (data)=>{
+                    const successData = data.trim();
+                    const CreateTr = document.createElement("tr");
+                    const CreateTd = document.createElement("td");
+                    CreateTd.appendChild(document.createTextNode(successData));
+                    CreateTd.setAttribute("colspan","4");
+                    CreateTr.appendChild(CreateTd);
+                    CreateTr.classList.add("TempTr");
+                    const TempTr= document.querySelectorAll(".TempTr")[0];
+                    console.dir(TempTr);
+                    if(TempTr !== undefined){
+                        TempTr.remove();
+                    }
+                    tr[i].after(CreateTr);
+                    console.log(data);
+                },
+                error:(e1,e2,e3)=>{
+                    console.log(e1,e2,e3);
                 }
-            }
-        });
-    console.dir(ViewList);
-});
+
+            })
+        })
+    }
+}

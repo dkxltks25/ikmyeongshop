@@ -13,12 +13,18 @@
     ResultSet rs1 = productQDAO.ProductProductQ(ProductNumber);
 
 %>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://l.bsks.ac.kr/~p201887082/DiliManage/css/bootstrap.css"/>
 <script>
 </script>
 <html>
 <head>
     <title>Title</title>
+    <style>
+        .checked{
+            color:orange;
+        }
+    </style>
 </head>
 <body>
     <div class = "ProductInfo_info">
@@ -53,7 +59,7 @@
 
     <div class = "ProductInfo_review">
         <div class = "ProductInfo_review_button">
-            <input type = "button" class = "viewAllReview" value="상품후기 전체보기">
+            <input type = "button" class = "viewAllReview" onclick = "location.href='../Review/ReviewList.jsp'" value="상품후기 전체보기">
             <input type = "button" class = "WriteReview" onclick="window.open('../Review',width=700, height=400,menubar='no', status='no', toolbar='no')" value="상품후기 글쓰기">
         </div>
         <div class = "ProductInfo_review_list">
@@ -73,20 +79,20 @@
                         <%
                     }else{
                         %>
-                            <tr>
+                            <tr >
                                 <th>평점</th>
                                 <th>제목</th>
-                                <th>아이디</th>
+                                <th>이름</th>
                                 <th>등록일자</th>
                             </tr>
                     <%
                     }
                     while(rs.next()){
                     %>
-                        <tr>
+                        <tr class = "ProductInfo_review_tr" data-id="<%=rs.getString("reviewId")%>">
                         <td>
                             <%
-                                for(int i = 0; i <=5;i++){
+                                for(int i = 0; i <5;i++){
                                         if(i <= rs.getInt("ProductGrade")-1){
                                             %>
                                                 <span class="fa fa-star checked"></span>
@@ -100,7 +106,7 @@
                             %>
                         </td>
                         <td><%=rs.getString("reviewtitle")%></td>
-                        <td><%=rs.getString("userId")%></td>
+                        <td><%=rs.getString("username")%></td>
                         <td><%=rs.getString("createAt")%></td>
                         </tr>
                     <%
@@ -136,7 +142,7 @@
                 <tr>
                     <!--<td><%=rs.getString("productgrade")%></td>
                     <td><%=rs.getString("reviewtitle")%></td>
-                    <td><%=rs.getString("userId")%></td>
+                    <td><%=rs.getString("username")%></td>
                     <td><%=rs.getString("createAt")%></td>-->
                 </tr>
                     <%
@@ -146,7 +152,7 @@
             </table>
         </div>
         <script src = "../js/ProductInfo.js"></script>
-
+        <script src ="http://l.bsks.ac.kr/~p201887082/DiliManage/js/bootstrap.js"></script>
 
     </div>
 </body>

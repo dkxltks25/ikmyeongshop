@@ -9,6 +9,11 @@
     <link rel = "stylesheet" href = "../css/ProductView.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel = "stylesheet" href = "http://l.bsks.ac.kr/~p201887082/DiliManage/css/bootstrap.css"/>
+    <style>
+        .checked{
+            color:orange;
+        }
+    </style>
     <%
         String ProductNumber = request.getParameter("ProductNumber");
         ProductDAO productDAO = new ProductDAO();
@@ -213,6 +218,6 @@
 
     </footer>
     <script src = "../js/ProductView.js"></script>
-
+    <script src = "http://l.bsks.ac.kr/~p201887082/DiliManage/js/jq.js"></script>
 </body>
 </html>

@@ -15,6 +15,12 @@
         NoticeDAO noticeDAO = new NoticeDAO();
         ResultSet rs = noticeDAO.listNotice();
     %>
+    <style>
+        tr{
+            cursor:pointer;
+        }
+
+    </style>
 </head>
 <body>
 <header>
@@ -41,19 +47,19 @@
                     <th scope="col">공지명</th>
                     <th scope="col">작성자</th>
                     <th scope="col">생성일</th>
+
                 </tr>
                 </thead>
                 <tbody>
                     <%
                         while(rs.next()){
                     %>
-                        <tr>
+                        <tr data-id = "<%=rs.getString("noticeId")%>">
                             <td><%=rs.getString("noticeId")%></td>
                             <td><%=rs.getString("noticeTitle")%></td>
                             <td><%=rs.getString("noticeWrite")%></td>
                             <td><%=rs.getString("createAt")%></td>
                         </tr>
-
                     <%
                         }
                     %>
@@ -67,6 +73,6 @@
     <jsp:include page="../footer.jsp"/>
 </footer>
 <script src = "../js/Service.js"></script>
-
+<script src="http://l.bsks.ac.kr/~p201887082/DiliManage/js/jq.js"></script>
 </body>
 </html>

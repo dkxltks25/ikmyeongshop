@@ -9,7 +9,7 @@
     <title>Title</title>
 </head>
 
-<link rel="stylesheet" href = "http://localhost:8080/css/header.css">
+<link rel="stylesheet" href = "../css/header.css">
 <body>
     <div class = "header__wrap">
         <div class = "header_top_menu">

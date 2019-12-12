@@ -46,8 +46,8 @@
                 <option value="00000003">FANCY</option>
                 <option value="00000004">ACCESSORY</option>
                 <option value="00000005">LIVING</option>
-                <option value="00000005">KITCHEN & BATHROOM</option>
-                <option value="00000005">MOBILE</option>
+                <option value="00000006">KITCHEN & BATHROOM</option>
+                <option value="00000007">MOBILE</option>
             </select>
         </div>
         <div class = "product_list_title">
@@ -77,12 +77,12 @@
             <div class = "itemBox">
                 <div class = "item_count">
                     <div class = "photoBox">
-                        <a href = "ProductView.jsp?ProductNumber=<%=rs.getString("PRODUCTID")%>">
-                            <img src ="../image/Thumbnail/<%=rs.getString("PRODUCTID")%>.jpg"/>
+                            <a href = "ProductView.jsp?ProductNumber=<%=rs.getString("PRODUCTID")%>">
+                                <img src ="../image/Thumbnail/<%=rs.getString("PRODUCTID")%>.jpg"/>
                         </a>
                     </div>
                     <div class = "textBox">
-                        <a href = "../image/Thumbnail/<%=rs.getString("PRODUCTID")%>.jpg">
+                        <a href = "ProductView.jsp?ProductNumber=<%=rs.getString("PRODUCTID")%>">
                             <strong><%=rs.getString("PRODUCTNAME")%></strong>
                         </a>
                     </div>
@@ -97,11 +97,6 @@
     %>
         </div>
 
-    <div class = "product_list_button">
-        <button class = "nextButton" >1</button>
-        <button class = "nextButton" >1</button>
-        <button class = "nextButton" >1</button>
-    </div>
     </div>
 
     <footer>

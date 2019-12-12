@@ -151,7 +151,22 @@ public class UserDAO {
     }
     //N명의 유저 조회
 
-
-
+    //이번달 신규 유저 수
+    public ResultSet NewUserGraph(String Day){
+        String Sql = "SELECT count(if(U.UserId is not null,U.UserId,null)) as User,D.id FROM Users\tAS U\n" +
+                "\tright join dateTimetable as D\n" +
+                "\t\ton D.id = date_format(U.createAt,\"%d\")\n" +
+                "\t\t\twhere UserId is null or date_format(U.createAt,\"%m\") = ?\n" +
+                "\t\t\t\tgroup by D.id\n" +
+                "\t\t\t\t\torder by D.id asc;";
+        try{
+            pstmt = conn.prepareStatement(Sql);
+            pstmt.setString(1,Day);
+            return pstmt.executeQuery();
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
 
 }

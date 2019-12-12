@@ -52,4 +52,16 @@ public class NoticeDAO {
             return null;
         }
     }
+
+    public ResultSet SelectNotice(String noticeId ){
+        String Sql = "SELECT * FROM NOTICE WHERE NOTICEID = ?";
+        try{
+            pstmt = conn.prepareStatement(Sql);
+            pstmt.setString(1,noticeId);
+            return pstmt.executeQuery();
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

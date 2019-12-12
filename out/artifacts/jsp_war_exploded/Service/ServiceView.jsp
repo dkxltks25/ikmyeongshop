@@ -17,9 +17,7 @@
     <div class = "ServiceView__QnA">
 
     </div>
-    <div class = "ServiceView__FAQ">
 
-    </div>
 
 </body>
 </html>

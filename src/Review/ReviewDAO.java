@@ -63,7 +63,10 @@ public class ReviewDAO {
         }
     }
     public ResultSet ProductReview(String ProductId){
-        String Sql = "Select * from Review where ProductId = ?";
+        String Sql = "Select R.*,U.UserName from Review AS R \n" +
+                "\tinner join Users As U\n" +
+                "\t\ton U.UserId = R.UserId \n" +
+                "\t\t\twhere R.ProductId = ?";
         try {
             pstmt = conn.prepareStatement(Sql);
             pstmt.setString(1, ProductId);
@@ -141,6 +144,31 @@ public class ReviewDAO {
             pstmt.setString(2,ProductId);
             return pstmt.executeQuery();
         }catch(Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+    public ResultSet SelectReview (String ReviewId){
+        String Sql = "Select * from Review where ReviewId = ?";
+        try{
+            pstmt = conn.prepareStatement(Sql);
+            pstmt.setString(1,ReviewId);
+            return pstmt.executeQuery();
+        }catch (Exception e){
+            e.printStackTrace();
+            return  null;
+        }
+    }
+    public ResultSet ProductReviewList (String ProductId){
+        String Sql = "SELECT * FROM REVIEW AS R\n" +
+                "\tinner join USERS AS U\n" +
+                "\t\ton R.REVIEWID = U.USERID\n" +
+                "\t\t\twhere ProductId = ?";
+        try{
+            pstmt = conn.prepareStatement(Sql);
+            pstmt.setString(1,ProductId);
+            return pstmt.executeQuery();
+        }catch (Exception e){
             e.printStackTrace();
             return null;
         }

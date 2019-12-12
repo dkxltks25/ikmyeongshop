@@ -186,7 +186,7 @@ public class ProductDAO {
         }
         public ResultSet Shopinglist(String UserId){
             String Sql = "" +
-                    "SELECT S.ShoppingBagId,S.ShoppingBagCount,P.ProductName, p.productPrice FROM ShoppingBag AS S " +
+                    "SELECT S.ShoppingBagId,S.ShoppingBagCount,P.ProductName,p.ProductId, p.productPrice FROM ShoppingBag AS S " +
                     "   inner join Users AS U" +
                     "    on S.UserId = U.UserId" +
                     "     inner join Product AS P" +
@@ -292,10 +292,75 @@ public class ProductDAO {
         }
 
 
-
+        //가장 많이 본 제품
+        public ResultSet LookinginterestedGraph (){
+            String Sql = "SELECT ProductViewCount,ProductName FROM PRODUCT order by ProductViewCount desc;\n";
+            try{
+                pstmt = conn.prepareStatement(Sql);
+                return pstmt.executeQuery();
+            }catch (Exception e){
+                e.printStackTrace();
+                return null;
+            }
+        }
+        // 장바구니에 가장 많이 담은 상품
+        public ResultSet AddToCartGraph(String Day){
+            String Sql = "SELECT count(*), P.ProductName FROM SHOPPINGBAG AS S \n" +
+                    "\tinner join Product AS P \n" +
+                    "\t\ton S.ProductId = P.ProductId\n" +
+                    "\twhere date_format(S.createAt,\"%m\") = ? group by S.ProductId;";
+            try{
+                pstmt = conn.prepareStatement(Sql);
+                pstmt.setString(1,Day);
+                return pstmt.executeQuery();
+            }catch (Exception e){
+                e.printStackTrace();
+                return null;
+            }
+        }
+        public ResultSet ProductShoppingBagList (String ProductId){
+            String Sql = "SELECT * FROM SHoppingBAG AS S\n" +
+                    "\tinner join Users AS U\n" +
+                    "\t\ton S.UserId = U.USerId\n" +
+                    "\t\t\twhere ProductId = ?";
+            try{
+                pstmt = conn.prepareStatement(Sql);
+                pstmt.setString(1,ProductId);
+                return pstmt.executeQuery();
+            }catch (Exception e){
+                e.printStackTrace();
+                return null;
+            }
+        }
         //관리자
-        public ResultSet BestShoppingBag(String Day){
+        public ResultSet ShoppingUserList(String [] Products, String UserId){
+            String Sql = "SELECT * FROM SHOPPINGBAG AS S\n" +
+                    "\tinner join Product AS p\n" +
+                    "\t\ton p.ProductId = S.ProductId\n" +
+                    "\t\t\twhere S.UserId = ?";
+            int i;
+
+            for( i = 0; i<Products.length;i++){
+                System.out.println(Products[0]);
+                if(i == 0){
+                    Sql += " AND (S.ShoppingBagId ="+ Products[i];
+                }
+                else{
+                    Sql += " OR S.ShoppingBagId =" + Products[i];
+                }
+            }
+            Sql += ")";
+            try{
+                System.out.println(Sql);
+                pstmt= conn.prepareStatement(Sql);
+                pstmt.setString(1,UserId);
+                return pstmt.executeQuery();
+
+            }catch (Exception e){
+                e.printStackTrace();
+                return null;
+            }
+
 
         }
-
 }

@@ -8,8 +8,11 @@ window.onload = ()=>{
             const Execution = MethodArray[value-1];
             Execution();
         })
-    }
 
+    }
+    console.log(ProductId);
+    console.log(PurchasePrice);
+    console.log(PurchaseCount);
     const PurchaseForm = document.querySelector("#PurchaseForm");
     PurchaseForm.addEventListener('submit',()=>{
 
@@ -66,7 +69,6 @@ const CheckLastArrive = () =>{
                 // PurchaseZipCode
                 // PurchaseAddress
                 // PurchaseFullAddress
-
             }
         },
         error:(e1,e2,e3)=>{
@@ -105,7 +107,7 @@ const SelectMyInfo = ()=>{
 };
 
 const fillData = (data) =>{
-    const DeliveryForm = document.querySelectorAll(".deliveryForm")
+    const DeliveryForm = document.querySelectorAll(".deliveryForm");
 
     for(let i = 0; i<DeliveryForm.length;i++){
         DeliveryForm[i].value = data[i] === null ? "" : data[i];

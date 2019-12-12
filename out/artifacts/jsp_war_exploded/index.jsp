@@ -1,4 +1,5 @@
-
+<%@ page import="Purchase.PurchaseDAO" %>
+<%@ page import="java.sql.ResultSet" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%

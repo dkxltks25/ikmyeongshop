@@ -65,12 +65,14 @@ window.onload = ()=>{
 
                 MuiInputDiv.appendChild(ContentInut);
                 MuiInputDiv.appendChild(ContentLabel);
-                NewTd1.setAttribute("colspan",5);
+                NewTd1.setAttribute("colspan","4");
                 NewTd1.appendChild(MuiInputDiv);
 
                 const NewTd2 = document.createElement("td");
                 const SubmitButton = document.createElement("button");
+                SubmitButton.addEventListener('click',()=>{
 
+                });
                 SubmitButton.setAttribute("width","100px");
                 SubmitButton.classList.add("mui-btn");
                 SubmitButton.classList.add("mui-btn--raised");

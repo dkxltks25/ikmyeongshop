@@ -25,6 +25,8 @@
     <script src="//cdn.muicss.com/mui-0.10.0/js/mui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
     <link rel="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css"/>
+
+
     <style>
         .ProductViewDetail__Container{
             width:100%;
@@ -116,7 +118,7 @@
                 <div class = "mui__UserDetail_right">
 
                     <ul class="mui-tabs__bar">
-                        <li class="mui--is-active List_Product"><a data-mui-toggle="tab" data-mui-controls="pane-events-1">구매자 명단</a></li>
+                        <li class="List_Product mui--is-active "><a data-mui-toggle="tab" data-mui-controls="pane-events-1">구매자 명단</a></li>
                         <li class ="List_Product"><a data-mui-toggle="tab" data-mui-controls="pane-events-2">관심 상품 등록 사용자</a></li>
                         <li class ="List_Product"><a data-mui-toggle="tab" data-mui-controls="pane-events-3">쇼핑백에 넣은 사용자</a></li>
                         <li class ="List_Product"><a data-mui-toggle="tab" data-mui-controls="pane-events-4">리뷰 남긴 사용자</a></li>
@@ -130,6 +132,10 @@
                                 <span class="mdl-switch__label"></span>
                             </label>
                         </div>
+                        <div>
+                            <table class="mui-table mui-table--bordered EachListTable">
+                            </table>
+                        </div>
 
                     </div>
                     <div class="mui-tabs__pane" id="pane-events-2">
@@ -137,6 +143,10 @@
                             <input type="checkbox" id="switch-2" class="mdl-switch__input ProductViewDetail__toggle" checked>
                             <span class="mdl-switch__label"></span>
                         </label>
+                        <div>
+                            <table class="mui-table mui-table--bordered EachListTable">
+                            </table>
+                        </div>
                     </div>
                     <div class="mui-tabs__pane" id="pane-events-3">
 
@@ -145,7 +155,9 @@
                             <span class="mdl-switch__label"></span>
                         </label>
 
-                        <div id = "mui__CustomPane3">
+                        <div>
+                            <table class="mui-table mui-table--bordered EachListTable">
+                            </table>
                         </div>
                     </div>
                     <div class="mui-tabs__pane" id="pane-events-4">
@@ -156,7 +168,9 @@
 
                             </label>
                             <input class="mdl-slider mdl-js-slider" type="range" min="0" max="2" value="0" tabindex="0">
-                            <div id = "mui__CustomPane4">
+                            <div >
+                                <table class="mui-table mui-table--bordered EachListTable">
+                                </table>
                             </div>
                         </div>
 

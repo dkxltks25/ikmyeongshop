@@ -93,7 +93,7 @@
                                         <i class="material-icons">more_vert</i>
                                     </button>
                                     <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="target<%=Number%>">
-                                        <li class="mdl-menu__item mui_list_custom" data-id="<%=rs.getString("UserId")%>">상세정보</li>
+                                        <li class="mdl-menu__item mui_list_custom detailUser" data-id="<%=rs.getString("UserId")%>">상세정보</li>
                                         <li class="mdl-menu__item mui_list_custom" >사용자 삭제</li>
                                     </ul>
                                 </td>
@@ -132,7 +132,7 @@
                                 사용자Email:<%=rs.getString("UserEmail")%>
                         </div>
                         <div class="mdl-card__actions mdl-card--border">
-                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="./UserDetail.jsp?UserNumber=<%=rs.getString("UserId")%>">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="./UserDetail.jsp?UserId=<%=rs.getString("UserId")%>">
                                 View detail
                             </a>
                         </div>

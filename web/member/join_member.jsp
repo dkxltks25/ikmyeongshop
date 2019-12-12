@@ -35,9 +35,7 @@
                     <div class = "join_member_sns_box">
                         <a id="kakao-login-btn"></a>
                         <a href="http://developers.kakao.com/logout"></a>
-                            <a class = "snsBox" href = "/">naverjoin_member</a>
                     </div>
-
                 </div>
 
             </div>
@@ -56,14 +54,14 @@
                 Kakao.API.request({
                     url: '/v1/user/me',
                     success:  function(res){
-                        const kemail = JSON.stringify( res.kaccount_email);
-                        const kid = JSON.stringify(res.id);
+                        const kemail = JSON.stringify( res.kaccount_email).replace(/"/gi, "");;
+                        const kid = JSON.stringify(res.id).replace(/"/gi, "");
                         const kimagw = JSON.stringify(res.properties.profile_image);
-                        const kname = JSON.stringify(res.properties.nickname);
+                        const kname = JSON.stringify(res.properties.nickname).replace(/"/gi, "");
+
                         console.dir(res);
-                        const url =  "./KakoMember.jsp?kemail=k" +kemail + "&kid="+kid+ "&kname="+kname;
+                        const url =  "./KakoMember.jsp?kemail=" +kemail + "&kid="+kid+ "&kname="+kname;
                         location.href=url;
-                        console.log(url);
                         },
                     fail: function(error) {
                         alert(JSON.stringify(error));

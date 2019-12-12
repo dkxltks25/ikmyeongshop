@@ -3,8 +3,6 @@
 <%@ page import="Product.ProductDAO"%>
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.SQLException" %>
-
-
 <html>
 <head>
     <title>Title</title>
@@ -22,11 +20,10 @@
     .ShoppingBag_row{
         padding:20px 0px 20px 10px;
     }
-    .table-image {
     td, th {
         vertical-align: middle;
         }
-    }
+
     .ShoppingBag__Sum_wrap{
         margin: 30px 0 0 0;
         padding: 50px 40px 50px 40px;
@@ -83,15 +80,10 @@
         <!--
           Session이 없는 유저는 그냥 테이블만 출력한다.
           Session이 있는 유저는 유저명과 제품명 제품카운터를 받아온다 .
-
           InsertShoppingBag함수에는 유저명,유저본호 아이템 카운트를 받는다.
-
         -->
-
     <div class="container">
-
         <div class = "location">
-
         </div>
         <div class = "ShoppingBag__container_text">
             <h2>장바구니</h2>
@@ -102,7 +94,6 @@
                     <thead>
                     <tr>
                         <th scope="col">
-
                         </th>
                         <th scope="col">상품정보</th>
                         <th scope="col">수량</th>
@@ -111,7 +102,6 @@
                     </tr>
                     </thead>
                     <tbody>
-
                     <%
                         ResultSet rs;
                         String ProductNumber = request.getParameter("ProductNumber");
@@ -134,11 +124,13 @@
                                     <tr>
                                         <td>
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input ProductSelected" id="customCheck<%=SelectId%>" >
+                                                <input type="checkbox" class="custom-control-input ProductSelected" id="customCheck<%=SelectId%>" data-id=<%=rs.getString("ShoppingBagId")%>>
                                                 <label class="custom-control-label " for="customCheck<%=SelectId%>"><%=rs.getString("ShoppingBagId")%></label>
                                             </div>
                                         </td>
-                                        <td><%=rs.getString("ProductName")%></td>
+                                        <td>
+                                            <%=rs.getString("ProductName")%>
+                                        </td>
                                         <td id = "Count<%=SelectId%>"><%=rs.getString("ShoppingBagCount")%></td>
                                         <td id = "Price<%=SelectId%>"><%=rs.getString("productPrice")%></td>
                                         <td><%=SumPrice%></td>
@@ -179,7 +171,6 @@
     <footer>
         <jsp:include page="../footer.jsp"/>
     </footer>
-
     <script src = "../js/shoppingBag.js"></script>
 </body>
 </html>

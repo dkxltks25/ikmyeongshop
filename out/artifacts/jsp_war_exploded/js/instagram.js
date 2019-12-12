@@ -289,5 +289,5 @@ const {thumbnails} = instagram_json;
 thumbnails.map(index=>{
     const {image} = index;
 const url = image.thumbnail.url;
-id.innerHTML += `<div class = "image_box"><img src=${url}> </div>`;
-})
+id.innerHTML += `<div class = "image_box"><img src=${url} alt="히잉"></div>`;
+});
